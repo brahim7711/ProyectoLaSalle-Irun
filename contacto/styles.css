@@ -1,0 +1,345 @@
+
+main {
+    padding: 120px 5% 40px 5%;
+}
+
+.contacto-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.salle-section {
+    margin-bottom: 60px;
+}
+
+.salle-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.637);
+}
+
+
+.cards-grid {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.cards-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cards-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.contact-card {
+    background: #fff;
+    border: 4px solid var(--primary-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(236, 195, 27, 0.3);
+}
+
+.card-image {
+    width: 100%;
+    height: 360px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #999;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 1024px) {
+    .salle-title {
+        font-size: 1.8rem;
+    }
+
+    .cards-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-image {
+        height: 180px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    main {
+        padding: 100px 5% 30px 5%;
+    }
+
+    .salle-section {
+        margin-bottom: 40px;
+    }
+
+    .salle-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .cards-grid {
+        gap: 20px;
+    }
+
+    .cards-grid-3,
+    .cards-grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 250px;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 90px 3% 20px 3%;
+    }
+
+    .salle-title {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+
+    .cards-grid {
+        gap: 15px;
+    }
+
+    .card-image {
+        height: 200px;
+    }
+
+    .card-content {
+        padding: 12px;
+    }
+
+    .card-content h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .card-content p {
+        font-size: 0.85rem;
+    }
+
+    .contact-card:hover {
+        transform: translateY(-5px);
+    }
+}
+.ubicaciones-section {
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 3px solid var(--primary-color);
+}
+
+.ubicaciones-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.637);
+}
+
+.ubicaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.ubicacion-card {
+    background: #fff;
+    border: 4px solid var(--primary-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.ubicacion-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(236, 195, 27, 0.3);
+}
+
+.ubicacion-card h3 {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.ubicacion-info {
+    padding: 25px;
+    flex: 1;
+}
+
+.ubicacion-info p {
+    margin: 12px 0;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.ubicacion-info strong {
+    color: var(--azul-oscuro);
+    font-weight: 700;
+}
+
+.ubicacion-mapa {
+    width: 100%;
+    height: 250px;
+    border-top: 2px solid var(--primary-color);
+}
+
+.ubicacion-mapa iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .ubicaciones-title {
+        font-size: 1.8rem;
+    }
+
+    .ubicaciones-grid {
+        gap: 30px;
+    }
+
+    .ubicacion-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ubicaciones-section {
+        margin-top: 50px;
+        padding-top: 40px;
+    }
+
+    .ubicaciones-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .ubicaciones-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .ubicacion-card h3 {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+
+    .ubicacion-info {
+        padding: 20px;
+    }
+
+    .ubicacion-info p {
+        margin: 10px 0;
+        font-size: 0.9rem;
+    }
+
+    .ubicacion-mapa {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ubicaciones-title {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+
+    .ubicacion-card h3 {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .ubicacion-info {
+        padding: 15px;
+    }
+
+    .ubicacion-info p {
+        margin: 8px 0;
+        font-size: 0.85rem;
+    }
+
+    .ubicacion-mapa {
+        height: 180px;
+    }
+}

@@ -1,0 +1,979 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.empresas-section {
+    padding: 120px 0 80px 0;
+    background-color: var(--background-color);
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.637);
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.votaciones-ranking {
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}
+
+.ranking-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.637);
+}
+
+.ranking-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.ranking-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-width: 220px;
+    max-width: 250px;
+}
+
+.ranking-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    transition: height 0.3s ease;
+}
+
+.ranking-oro {
+    border: 3px solid #FFD700;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+}
+
+.ranking-oro:hover {
+    transform: translateY(-10px) scale(1.05);  
+}
+
+.ranking-plata {
+    border: 3px solid #C0C0C0;
+    background: linear-gradient(135deg, #E8E8E8 0%, #C0C0C0 100%);
+}
+
+
+.ranking-plata:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.ranking-bronce {
+    border: 3px solid #CD7F32;
+    background: linear-gradient(135deg, #D4925F 0%, #CD7F32 100%);
+}
+
+.ranking-bronce:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.ranking-logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 4px solid var(--primary-color);
+}
+
+.ranking-info {
+    margin-top: 1rem;
+}
+
+.ranking-empresa {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--azul-oscuro);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.ranking-oro .ranking-empresa {
+    color: #1a1a1a;
+}
+
+.ranking-plata .ranking-empresa {
+    color: #1a1a1a;
+}
+
+.ranking-bronce .ranking-empresa {
+    color: #1a1a1a;
+}
+
+.ranking-votos {
+    font-size: 1.1rem;
+    color: #2a2a2a;
+    font-weight: 600;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .ranking-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .ranking-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .ranking-title {
+        font-size: 2rem;
+    }
+}
+
+.empresas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.empresa-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empresa-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.empresa-card:active {
+    transform: translateY(-4px);
+}
+
+.empresa-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.empresa-card:hover .empresa-overlay {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+}
+
+.empresa-nombre {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1.4;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.empresa-arrow {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.empresa-arrow span {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.empresa-card:hover .empresa-arrow {
+    background: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.empresa-card:hover .empresa-arrow span {
+    color: white;
+    transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+    .empresas-section {
+        padding: 140px 0 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .empresas-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .empresa-card {
+        height: 180px;
+    }
+    
+    .empresa-overlay {
+        padding: 1.2rem;
+    }
+    
+    .empresa-nombre {
+        font-size: 1.2rem;
+    }
+    
+    .empresa-arrow {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .empresas-section {
+        padding: 150px 0 50px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .empresa-card {
+        height: 160px;
+    }
+    
+    .empresa-overlay {
+        padding: 1rem;
+    }
+    
+    .empresa-nombre {
+        font-size: 1rem;
+    }
+    
+    .empresa-arrow {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.empresa-card {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.primero {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.primero:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
+.primero h1 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: clamp(3rem, 8vw, 8rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.primero img {
+    display: none;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.segundo {
+    max-width: 1400px;
+    margin: 50px auto 60px auto;
+    padding: 80px 60px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.segundo h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--primary-color, #efb810);
+    margin-bottom: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 3px solid var(--primary-color, #efb810);
+    padding-bottom: 12px;
+}
+
+.segundo p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.segundo a {
+    color: var(--primary-color, #efb810);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.segundo a:hover {
+    color: #d4a406;
+    text-decoration: underline;
+}
+
+.segundo strong {
+    color: var(--secondary-color, #2c3e50);
+    font-weight: 700;
+}
+
+.caja-datos-empresa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+    padding: 30px 0;
+    border-top: 3px solid var(--primary-color, #efb810);
+    padding-top: 40px;
+}
+
+.dato-empresas1 {
+    background: var(--azul-oscuro, #171473);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dato-empresas1:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.dato-empresas2 {
+    background: var(--primary-color, #efb810);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    color: black;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dato-empresas2:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.dato-empresas1 h1 {
+    color: var(--primary-color, #efb810);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    border-bottom: 2px solid var(--primary-color, #efb810);
+    padding-bottom: 8px;
+}
+
+.dato-empresas2 h1 {
+    color: var(--azul-oscuro, #171473);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    border-bottom: 2px solid var(--azul-oscuro, #171473);
+    padding-bottom: 8px;
+}
+
+.dato-empresas1 h1:first-child,
+.dato-empresas2 h1:first-child {
+    margin-top: 0;
+}
+
+.dato-empresas1 h3 {
+    color: var(--primary-color, #efb810);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+.dato-empresas2 h3 {
+    color: var(--azul-oscuro, #171473);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+.dato-empresas1 p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.dato-empresas2 p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.dato-empresas1 iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 20px 0;
+}
+
+.dato-empresas1 a {
+    color: var(--primary-color, #efb810);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    word-break: break-all;
+}
+
+.dato-empresas1 a:hover {
+    color: #d4a406;
+    text-decoration: underline;
+}
+
+.dato-empresas2 a {
+    color: var(--azul-oscuro, #171473);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    word-break: break-all;
+}
+
+.dato-empresas2 a:hover {
+    color: #0f0f5a;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .caja-datos-empresa {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    
+    .dato-empresas1,
+    .dato-empresas2 {
+        padding: 25px 20px;
+    }
+    
+    .dato-empresas1 h1,
+    .dato-empresas2 h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        margin-top: 25px;
+    }
+    
+    .dato-empresas1 h1:first-child,
+    .dato-empresas2 h1:first-child {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .dato-empresas1,
+    .dato-empresas2 {
+        padding: 20px 15px;
+        border-radius: 8px;
+    }
+    
+    .dato-empresas1 h1,
+    .dato-empresas2 h1 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        margin-top: 20px;
+    }
+    
+    .dato-empresas1 h3,
+    .dato-empresas2 h3 {
+        font-size: 1.1rem;
+        margin-top: 20px;
+    }
+    
+    .dato-empresas1 p,
+    .dato-empresas2 p {
+        font-size: 1rem;
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 30px 0;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 16px;
+}
+
+
+@media (max-width: 768px) {
+     .primero h1 {
+        font-size: clamp(2rem, 6vw, 4rem);
+    }
+    
+    .segundo {
+        padding: 50px 30px;
+        margin: 40px auto 60px auto;
+    }
+    
+    .segundo h2 {
+        font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    }
+    
+    .segundo p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .segundo {
+        padding: 40px 24px;
+        margin: 30px auto 50px auto;
+        border-radius: 12px;
+    }
+    
+    .segundo h2 {
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        margin-bottom: 16px;
+    }
+     .primero {
+        height: 80vh;
+    }
+    
+    .primero h1 {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+    }
+}
+
+.btn-votar-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0 10px 30px rgba(239, 184, 16, 0.5);
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-votar-flotante:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(239, 184, 16, 0.7);
+    background: linear-gradient(135deg, #d4a406 0%, var(--primary-color) 100%);
+}
+
+.btn-votar-flotante:active {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(239, 184, 16, 0.6);
+}
+
+.modal-votacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-votacion.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-votacion-content {
+    background: white;
+    border-radius: 20px;
+    padding: 0;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transform: translateY(30px);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.modal-votacion.active .modal-votacion-content {
+    transform: translateY(0);
+}
+
+.modal-votacion-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modal-votacion-close:hover {
+    color: black;
+}
+
+.modal-votacion-header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 28px 24px;
+    text-align: center;
+    margin: 0;
+}
+
+.modal-votacion-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 0 6px 0;
+}
+
+.modal-votacion-header p {
+    margin: 0;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+.form-votacion {
+    padding: 28px 35px 36px 35px;
+}
+
+.mensaje-votacion {
+    padding: 15px;
+    margin: 20px 35px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+
+.mensaje-votacion.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.mensaje-votacion.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+.form-votacion .form-group {
+    margin-bottom: 24px;
+}
+
+.form-votacion label {
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-votacion .required {
+    color: #dc3545;
+}
+
+.form-votacion input[type="text"] {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    background: #f8f9fa;
+    font-size: 1rem;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    color: var(--secondary-color);
+    box-sizing: border-box;
+}
+
+.form-votacion input[type="text"]:focus {
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(239, 184, 16, 0.15);
+    transform: translateY(-2px);
+}
+
+.form-votacion .input-help {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 4px;
+    display: block;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-votar-submit {
+    flex: 1;
+    padding: 16px 40px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 8px 25px rgba(239, 184, 16, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.btn-votar-submit:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(239, 184, 16, 0.6);
+    background: linear-gradient(135deg, #d4a406 0%, var(--primary-color) 100%);
+}
+
+.btn-votar-cancel {
+    flex: 1;
+    padding: 16px 40px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.btn-votar-cancel:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .btn-votar-flotante {
+        bottom: 20px;
+        right: 20px;
+        padding: 14px 25px;
+        font-size: 0.95rem;
+    }
+    
+    .modal-votacion-content {
+        width: 95%;
+    }
+    
+    .form-votacion {
+        padding: 20px 25px 30px 25px;
+    }
+    
+    .modal-votacion-header {
+        padding: 20px 20px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-votar-flotante {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+    
+    .form-votacion {
+        padding: 18px 16px 24px 16px;
+    }
+    
+    .modal-votacion-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .btn-votar-submit,
+    .btn-votar-cancel {
+        font-size: 0.95rem;
+        padding: 14px 30px;
+    }
+}
