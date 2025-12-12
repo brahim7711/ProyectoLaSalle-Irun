@@ -132,7 +132,7 @@ if (isset($_SESSION['idUsuario'])) {
         <h2>ORAGANIZADORES (La Salle Irun)</h2>
         <br><br>
         <div class="irun-org row m-0 container p-0">
-                <div class="fotoirun col-6 p-0"></div>
+                <div class="fotoirun col-5 p-0"></div>
                 <div class="col-5 text-irun">
                     <p>
                         Los organizadores de <strong>fotodeclasede2ADIR</strong> —
