@@ -85,4 +85,4 @@ INSERT INTO empresas_autorizadas (email_autorizado) VALUES
 ('empresasimulada3@lasallesagradocorazon.es'),
 ('info.sallematsuministros@gmail.com'),
 ('paapeer.mmass.empresa@gmail.com'),
-('fidesign.mundonuevo@gmail.com')
+('fidesign.mundonuevo@gmail.com');

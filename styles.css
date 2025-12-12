@@ -8,33 +8,6 @@
     min-height: 40vh;
 }
 
-.btn-inscribete {
-    background:var(--primary-color);
-    color: var(--secondary-color);
-    font-size: 1.3rem;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-    padding: 16px 55px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: 0 8px 25px rgba(239, 184, 16, 0.4);
-    transition: all 0.3s ease;
-    margin-top: 15px;
-}
-
-.btn-inscribete:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 35px rgba(239, 184, 16, 0.6);
-    background: var(--primary-color);
-}
-
-.btn-inscribete:active {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(239, 184, 16, 0.5);
-}
 
 
 .botones-pdf-container {
@@ -460,18 +433,7 @@
     overflow-y: auto;
     position: relative;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    animation: slideDown 0.3s ease;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    
 }
 
 .modal-close {
@@ -500,6 +462,8 @@
     border-radius: 20px 20px 0 0;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-header h2 {
