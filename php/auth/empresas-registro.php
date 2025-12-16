@@ -44,14 +44,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['confirmar'])) {
                 }
             }
 
+            //Hash de la contraseña
+            $password = hash("sha256", $_POST['contrasena_empresa']);
+
+
             // SI ESTÁ AUTORIZADA, HACER EL INSERT EN LA TABLA empresas
-            $stmt = $conexion->prepare("INSERT INTO empresas (id_autorizado, nombre_empresa, descripcion, logo_url, web_url, spot_url, contacto_adicional, horario, meet_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt = $conexion->prepare("INSERT INTO empresas (id_autorizado, nombre_empresa, descripcion, logo_url, contrasena, web_url, spot_url, contacto_adicional, horario, meet_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $stmt->bind_param(
-                'sssssssss',
+                'ssssssssss',
                 $id_autorizado,
                 $_POST['nombre_empresa'],
                 $_POST['descripcion'],
                 $ruta_final,
+                $password,
                 $_POST['web_url'],
                 $_POST['spot_url'],
                 $_POST['contacto_adicional'],
