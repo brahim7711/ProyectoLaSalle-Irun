@@ -27,7 +27,7 @@
         </div>
     </nav>
     <main>
-        <section class="empresas-section">
+        <section class="container-fluid empresas-section">
             <div class="container">
                 <h1 class="section-title">Empresas Participantes</h1>
                 <p class="section-subtitle">Descubre las empresas que estarán presentes en nuestra feria de empleo</p>

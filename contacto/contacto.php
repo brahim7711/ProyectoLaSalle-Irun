@@ -45,14 +45,16 @@ if (isset($_SESSION['idUsuario'])) {
                 combinamos programación, diseño y gestión de datos para ofrecer una experiencia digital interactiva,
                 moderna y accesible.
             </p>
-            <h2>DESARROLLADORES (La Salle Santo Ángel)</h2>
+            <h2>La Salle Santo Ángel</h2>
         </div>
         <br>
         <h5>DISEÑADORES FRONTEND</h5>
         <div class="equipo mt-2 row mx-3">
-            <div class="miembro col-sm-12 col-md-12 col-lg-4 carta mt-2">
-                <img class="card-img-top" src="../resources/sinfoto.webp" alt="Card image cap">
-                <div>
+            <div class="miembro col-sm-8 col-md-12 col-lg-4 carta mt-2 p-0">
+                <div class="container-fluid caja-img">
+                    <img class="card-img-top" src="../resources/sinfoto.webp" alt="Card image cap">
+                </div>
+                <div class="text-miembros">
                     <h4 class="card-title mb-2">Gabriel Delgado</h4>
                     <h6>Diseñador Frontend</h6>
                     <p class="card-text">
@@ -61,11 +63,26 @@ if (isset($_SESSION['idUsuario'])) {
                     </p>
                 </div>
             </div>
-            <div class="miembro col-sm-12 col-md-12 col-lg-4 carta mt-2">
-                <img class="card-img-top" src="../resources/rafa.jpeg" alt="Card image cap">
-                <div>
+            <div class="miembro col-sm-8 col-md-12 col-lg-4 carta mt-2 p-0">
+                <div class="container-fluid caja-img">
+                    <img class="card-img-top" src="../resources/rafa.jpeg" alt="Card image cap">
+                </div>
+                <div class="text-miembros">
                     <h4 class="card-title mb-2">Rafael Navarro</h4>
-                    <h6>Desarrollador Backend</h6>
+                    <h6>Desarrollador Fronted</h6>
+                    <p class="card-text">
+                        Encargado de la lógica del servidor, gestión de usuarios y conexión con la base de datos.
+                        Implementa las funcionalidades principales de la feria virtual y la seguridad del sistema.
+                    </p>
+                </div>
+            </div>
+            <div class="miembro col-sm-8 col-md-12 col-lg-4 carta mt-2 p-0">
+                <div class="container-fluid caja-img">
+                    <img class="card-img-top" src="../resources/liria.jpeg" alt="Card image cap">
+                </div>
+                <div class="text-miembros">
+                    <h4 class="card-title mb-2">Ángel Liria</h4>
+                    <h6>Desarrollador Fronted</h6>
                     <p class="card-text">
                         Encargado de la lógica del servidor, gestión de usuarios y conexión con la base de datos.
                         Implementa las funcionalidades principales de la feria virtual y la seguridad del sistema.
@@ -76,20 +93,24 @@ if (isset($_SESSION['idUsuario'])) {
         <br>
         <h5>DESARROLLADORES BACKEND</h5>
         <div class="equipo mt-2 row mx-3">
-            <div class="miembro col-sm-12 col-md-12 col-lg-4 carta mt-2">
-                <img class="card-img-top" src="../resources/sinfoto.webp" alt="Card image cap">
-                <div>
+            <div class="miembro col-sm-8 col-md-12 col-lg-3 carta mt-2 p-0">
+                <div class="container-fluid caja-img">
+                    <img class="card-img-top" src="../resources/sinfoto.webp" alt="Card image cap">
+                </div>
+                <div class="text-miembros">
                     <h4 class="card-title mb-2">Brahim Litim</h4>
-                    <h6>Diseñador Frontend</h6>
+                    <h6>Diseñador Backend</h6>
                     <p class="card-text">
                         Responsable del diseño visual y la experiencia del usuario.
                         Se ocupa de que la interfaz sea intuitiva, atractiva y responsive en todos los dispositivos.
                     </p>
                 </div>
             </div>
-            <div class="miembro col-sm-12 col-md-12 col-lg-4 carta mt-2">
-                <img class="card-img-top" src="../resources/juanan.jpeg" alt="Card image cap">
-                <div>
+            <div class="miembro col-sm-8 col-md-12 col-lg-3 carta mt-2 p-0">
+                <div class="container-fluid caja-img">
+                    <img class="card-img-top" src="../resources/juanan.jpeg" alt="Card image cap">
+                </div>
+                <div class="text-miembros">
                     <h4 class="card-title mb-2">Juan Antonio Alfaro </h4>
                     <h6>Desarrollador Backend</h6>
                     <p class="card-text">
@@ -98,42 +119,29 @@ if (isset($_SESSION['idUsuario'])) {
                     </p>
                 </div>
             </div>
-        </div>
-        <br>
-        <h5>ADMINISTRADORES BASE DE DATOS</h5>
-        <div class="equipo mt-2 row mx-3">
-
-            <div class="miembro col-sm-12 col-md-12 col-lg-4 carta mt-2">
-                <img class="card-img-top" src="../resources/sinfoto.webp" alt="Card image cap">
-                <div>
+            <div class="miembro col-sm-8 col-md-12 col-lg-3 carta mt-2 p-0">
+                <div class="container-fluid caja-img">
+                    <img class="card-img-top" src="../resources/sinfoto.webp" alt="Card image cap">
+                </div>
+                <div class="text-miembros">
                     <h4 class="card-title mb-2">Marcos Alcega</h4>
-                    <h6>Diseñador Frontend</h6>
+                    <h6>Diseñador Backend</h6>
                     <p class="card-text">
                         Responsable del diseño visual y la experiencia del usuario.
                         Se ocupa de que la interfaz sea intuitiva, atractiva y responsive en todos los dispositivos.
                     </p>
                 </div>
             </div>
-            <div class="miembro col-sm-12 col-md-12 col-lg-4 carta mt-2">
-                <img class="card-img-top" src="../resources/liria.jpeg" alt="Card image cap">
-                <div>
-                    <h4 class="card-title mb-2">Ángel Liria</h4>
-                    <h6>Desarrollador Backend</h6>
-                    <p class="card-text">
-                        Encargado de la lógica del servidor, gestión de usuarios y conexión con la base de datos.
-                        Implementa las funcionalidades principales de la feria virtual y la seguridad del sistema.
-                    </p>
-                </div>
-            </div>
         </div>
         <br>
         <br>
+        <br>
         <br><br>
-        <h2>ORAGANIZADORES (La Salle Irun)</h2>
+        <h2>La Salle Irun</h2>
         <br><br>
         <div class="irun-org row m-0 container p-0">
-                <div class="fotoirun col-5 p-0"></div>
-                <div class="col-5 text-irun">
+                <div class="fotoirun col-sm-12 col-md-12 col-lg-6 p-0"></div>
+                <div class="col-sm-12 col-md-12 col-lg-5 text-irun pt-3">
                     <p>
                         Los organizadores de <strong>fotodeclasede2ADIR</strong> —
                         Lucía Herrera Martínez, Sergio Ramírez Beltrán, Marina Castillo Rojas,

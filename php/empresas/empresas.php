@@ -19,7 +19,5 @@ if ($result && $result->num_rows > 0) {
     }
     echo '</div>';
     $result->free();
-} else {
-    echo '<p>No hay empresas registradas en este momento.</p>';
 }
 ?>
