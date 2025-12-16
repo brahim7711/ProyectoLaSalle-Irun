@@ -81,9 +81,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['confirmar'])) {
                 // GENERAR TODOS LOS STANDS POSIBLES Y BUSCAR UNO DISPONIBLE
                 $STAD = null;
                 $LetraStand = array('A', 'B', 'C', 'D');
-                while ($STAD == null){
-                    $numero_aleatorio = rand(0,3);
-                    $numero_aleatorio2 = rand(1,8);
+                while ($STAD == null) {
+                    $numero_aleatorio = rand(0, 3);
+                    $numero_aleatorio2 = rand(1, 8);
                     for ($j = 1; $j <= 8; $j++) {
                         $stand_actual = $LetraStand[$numero_aleatorio] . $numero_aleatorio2;
                         if (!in_array($stand_actual, $stands_ocupados)) {
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['confirmar'])) {
                     if ($stmt->execute()) {
                         $auth_message = "<p class='success-message'>¡Registro completado con éxito! Stand asignado: " . $STAD . "</p>";
                         sleep(seconds: 4);
-                        header("Location: ./empresas.php");
+                        header("Location: ../../index.php");
                     }
                     $stmt->close();
                 }
@@ -115,4 +115,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['confirmar'])) {
         $auth_message = "<p class='error-message'>Error: La empresa no está autorizada para registrarse. Contacte con la administración.</p>";
     }
 }
-?>

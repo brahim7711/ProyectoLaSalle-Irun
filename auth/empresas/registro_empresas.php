@@ -11,65 +11,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <title>LSBM</title>
 </head>
+
 <body>
-    <header class="header">
-        <a href="../../index.php" class="logo" aria-label="Inicio">
-            <img src="../../resources/Logo-Png.png" alt="Logo" class="logo-img">
-        </a>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="../../index.php" class="nav-link">Principal</a></li>
-                <li class="nav-item"><a href="../../mapa/mapa.php" class="nav-link">Mapa</a></li>
-                <li class="nav-item"><a href="../../empresas/empresas.php" class="nav-link">Empresas</a></li>
-                <li class="nav-item nav-dropdown">
-                    <a href="./empresas.php" class="nav-link">Más ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="./empresas.php">Registro empresa</a></li>
-                        <li><a href="../administracion/administracion.php">Administración</a></li>
-                        <li><a href="../../contacto/contacto.php">Nosotros</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
-    </header>
     <main>
+        <video autoplay loop muted id="video_background">
+            <source src="../../resources/0_Landscape_Mountains_1280x720.mp4" type="video/mp4">
+        </video>
         <section id="section-secondary">
             <div class="registro-secondary">
                 <div class="header-registro">
-                    <h1>Completa tu Registro</h1>
-                    <p>Información de tu empresa</p>
+                    <div class="logo"><img src="../../resources/Logo-Png.png"></div>
                 </div>
                 <form method="post" enctype="multipart/form-data">
-                   
+                    <h1>Completa tu Registro</h1>
                     <label for="nombre_empresa">Nombre de la Empresa <span class="required">*</span></label>
-                    <input type="text" id="nombre_empresa" name="nombre_empresa" placeholder="Nombre de tu empresa" required>
+                    <input type="text" id="nombre_empresa" class="form-control" name="nombre_empresa" placeholder="Nombre de tu empresa" required>
+                    <label for="contrasena_empresa">Contraseña<span class="required">*</span></label>
+                    <input type="password" id="contrasena_empresa" class="form-control" name="contrasena_empresa" placeholder="Nombre de tu empresa" required>
                     <label for="descripcion">Descripción</label>
-                    <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe tu empresa"></textarea>
+                    <textarea id="descripcion" name="descripcion" class="form-control" rows="4" placeholder="Describe tu empresa"></textarea>
                     <label for="logo">Logo de la Empresa</label>
-                    <input type="file" id="logo" name="logo" accept="image/*">
+                    <input type="file" id="logo" name="logo" class="form-control" accept="image/*">
                     <label for="web_url">Página Web</label>
-                    <input type="url" id="web_url" name="web_url" placeholder="https://www.ejemplo.com">
+                    <input type="url" id="web_url" name="web_url" class="form-control" placeholder="https://www.ejemplo.com">
                     <label for="spot_url">Spot Publicitario (URL)</label>
-                    <input type="url" id="spot_url" name="spot_url" placeholder="https://www.youtube.com/watch?v=...">
+                    <input type="url" id="spot_url" name="spot_url" class="form-control" placeholder="https://www.youtube.com/watch?v=...">
                     <label for="contacto_adicional">Contacto Adicional</label>
-                    <input type="text" id="contacto_adicional" name="contacto_adicional" placeholder="Teléfono, email, etc.">
+                    <input type="text" id="contacto_adicional" class="form-control" name="contacto_adicional" placeholder="Teléfono, email, etc.">
                     <label for="horario">Horario</label>
-                    <input type="text" id="horario" name="horario" placeholder="Ej: Lunes a Viernes 9:00-18:00">
+                    <input type="text" id="horario" name="horario" class="form-control" placeholder="Ej: Lunes a Viernes 9:00-18:00">
                     <label for="meet_url">Enlace de Meet</label>
-                    <input type="url" id="meet_url" name="meet_url" placeholder="https://meet.google.com/...">
+                    <input type="url" id="meet_url" name="meet_url" class="form-control" placeholder="https://meet.google.com/...">
                     <?php echo $auth_message ?? ''; ?>
                     <input type="submit" name="confirmar" value="Registrar Empresa">
                 </form>
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 LSBM. Todos los derechos reservados.</p>
-        <p>Creado por: Juan Antonio Alfaro Peña, Rafael Navarro Andres, Angel Liria Montañes</p>
-    </footer>
     <script src="../../js-menu.js"></script>
 </body>
 
