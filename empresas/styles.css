@@ -167,6 +167,11 @@ body{
     margin: 0;
 }
 
+.ranking-normal {
+    border: 2px solid #6f0000;
+    background: #ff0000;
+}
+
 @media (max-width: 768px) {
     .ranking-container {
         flex-direction: column;

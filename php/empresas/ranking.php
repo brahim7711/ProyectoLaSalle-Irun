@@ -6,7 +6,7 @@ $sql = "SELECT e.id, e.nombre_empresa, e.logo_url, COUNT(v.id) as total_votos
         LEFT JOIN votaciones v ON e.id = v.empresa_id 
         GROUP BY e.id, e.nombre_empresa, e.logo_url 
         ORDER BY total_votos DESC, e.nombre_empresa ASC
-        LIMIT 3";
+        LIMIT 10";
 $result = $conexion->query($sql);
 
 if ($result && $result->num_rows > 0) {
@@ -29,6 +29,10 @@ if ($result && $result->num_rows > 0) {
             $claseRanking = 'ranking-bronce';
         }
         
+        if($posicion > 3){
+            $claseRanking = 'ranking-normal';
+        }
+
         echo '<div class="ranking-card ' . $claseRanking . '" onclick="window.location.href=\'ver-empresa.php?id=' . $row['id'] . '\'">
                 <div class="ranking-logo" style="background-image: url(\'' . htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') . '\');"></div>
                 <div class="ranking-info">
@@ -38,6 +42,7 @@ if ($result && $result->num_rows > 0) {
               </div>';
         
         $posicion++;
+        
     }
     
     echo '</div>';
