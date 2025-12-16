@@ -4,7 +4,15 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: calc(var(--header-height) + 40px) 20px 40px;
+    padding: 20px 40px;
+}
+#video_background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%; 
+  z-index: -1; 
 }
 
 section {
@@ -15,11 +23,14 @@ section {
 }
 
 .registro-principal {
-    background: white;
+    
     border-radius: 20px;
-    max-width: 700px;
+    max-width: 500px;
     width: 100%;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.356);
+    background-color: rgba(0, 0, 0, 0.116);
+    backdrop-filter: blur(30px);
     overflow: hidden;
     animation: slideIn 0.4s ease;
 }
@@ -36,11 +47,18 @@ section {
 }
 
 .header-registro {
-    background: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.856);
     color: var(--secondary-color);
-    padding: 35px 30px;
+    padding: 15px 10px;
     margin: 0;
     text-align: center;
+}
+.logo img{
+    scale: 2.5;
+    height: 1rem;
+    width: 2rem;
+    margin-bottom: 10px;
+    
 }
 
 .registro-principal h1 {
@@ -105,31 +123,39 @@ section {
 
 .registro-principal label {
     display: block;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1.05rem;
     color: var(--secondary-color);
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     letter-spacing: 0.3px;
+    color: aliceblue;
 }
 
 .registro-principal input[type="email"] {
     width: 100%;
-    padding: 15px 20px;
+    padding: 5px 5px;
     border: 2px solid #e0e0e0;
-    border-radius: 12px;
+    border-radius: 15px;
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
-    background: #f8f9fa;
+    background: inherit;
     color: var(--secondary-color);
 }
 
 .registro-principal input:focus {
     outline: none;
     border-color: var(--primary-color);
-    background: white;
+    background: rgba(255, 255, 255, 0.639);
     box-shadow: 0 0 0 4px rgba(239, 184, 16, 0.15);
     transform: translateY(-2px);
+    color: black;
+    
+}
+
+.registro-principal input::placeholder:focus {
+    color: #676767;
+    
 }
 
 .registro-principal input::placeholder {
@@ -255,37 +281,31 @@ section {
 
 
 .registro-secondary {
-    background: white;
+    border: 2px solid rgba(255, 255, 255, 0.356);
+    background-color: rgba(0, 0, 0, 0.116);
+    backdrop-filter: blur(30px);
     border-radius: 20px;
     max-width: 1000px;
-    width: 100%;
+    width: 70%;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     animation: slideIn 0.4s ease;
 }
 
 .registro-secondary .header-registro {
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 35px 30px;
+    background-color: rgba(255, 255, 255, 0.856);
+    padding: 15px 10px;
     margin: 0;
     text-align: center;
 }
 
-.registro-secondary h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
-    margin: 0 0 10px 0;
-}
 
-.registro-secondary p {
-    font-size: 1rem;
-    margin: 0;
-    opacity: 0.95;
-    font-weight: 500;
+
+.registro-secondary form h1 {
+    text-align: center;
+    color: aliceblue;
+    
+    
 }
 
 .registro-secondary form {
@@ -297,10 +317,10 @@ section {
 
 .registro-secondary label {
     display: block;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 1.05rem;
     color: var(--secondary-color);
-    margin-bottom: 10px;
+    color: aliceblue;
     letter-spacing: 0.3px;
 }
 
@@ -320,7 +340,7 @@ section {
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
-    background: #f8f9fa;
+    background: inherit;
     color: var(--secondary-color);
 }
 
@@ -332,6 +352,7 @@ section {
 .registro-secondary input[type="file"] {
     padding: 10px 15px;
     cursor: pointer;
+    color: aliceblue;
 }
 
 .registro-secondary input:focus,
@@ -345,7 +366,7 @@ section {
 
 .registro-secondary input::placeholder,
 .registro-secondary textarea::placeholder {
-    color: #999;
+    color: aliceblue;
     font-style: italic;
 }
 
@@ -361,7 +382,6 @@ section {
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    box-shadow: 0 8px 25px rgba(239, 184, 16, 0.4);
     transition: all 0.3s ease;
     margin-top: 10px;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
@@ -392,6 +412,7 @@ section {
 .registro-secondary textarea:valid:not(:placeholder-shown) {
     border-color: #2ecc71;
 }
+
 
 @media (max-width: 768px) {
     .registro-secondary {
