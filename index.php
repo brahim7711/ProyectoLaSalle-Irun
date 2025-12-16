@@ -24,6 +24,7 @@
                 <li><button><a href="./empresas/empresas.php">EMPRESAS</a></button></li>
                 <li><button><a href="index.php#Patrocinadores">CENTROS</a></button></li>
                 <li><button><a href="./contacto/contacto.php">NOSOTROS</a></button></li>
+                <li><button><a href="./inicioSesion/inicioGeneral.html">INICIAR SESIÓN</a></button></li>
             </ul>
         </div>
     </nav>
