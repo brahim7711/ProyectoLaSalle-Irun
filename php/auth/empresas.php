@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['check_email'])) {
         $empresa_autorizada = $result->fetch_assoc();
         $stmt->close();
 
+        $count2 = 0;
         if ($empresa_autorizada) {
             $stmt = $conexion->prepare("SELECT * FROM empresas WHERE id_autorizado=? LIMIT 1");
             $stmt->bind_param('i', $empresa_autorizada['id_autorizado']);
