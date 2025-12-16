@@ -22,7 +22,15 @@
             for ($i = 1; $i <= 8; $i++) {
                 $stand = "A" . $i;
                 if (in_array($stand, $ocupados)) {
-                    echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')">' . $stand . '</div>';
+                    $sql="SELECT e.logo_url FROM stands s INNER JOIN empresas e ON s.empresa_id = e.id WHERE s.stand_id='$stand' LIMIT 1";
+                    $resultadologo=$conexion->query($sql);
+                    if ($resultadologo && $row = $resultadologo->fetch_assoc()) {
+                        $logoUrl = trim($row['logo_url'], '"');
+                        $logoUrl = str_replace('../../', '../', $logoUrl);
+                        echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')" style="background-image: url(\'' . htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') . '\');"></div>';
+                    } else {
+                        echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')">' . $stand . '</div>';
+                    }
                 } else {
                     echo '<div class="stand vacio" data-stand="' . $stand . '">' . $stand . '</div>';
                 }
@@ -55,10 +63,18 @@
             }
 
             // Renderizar la fila B (manteniendo la estructura original)
-            for ($i = 1; $i <= 8; $i++) {
+             for ($i = 1; $i <= 8; $i++) {
                 $stand = "B" . $i;
                 if (in_array($stand, $ocupados)) {
-                    echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')">' . $stand . '</div>';
+                    $sql="SELECT e.logo_url FROM stands s INNER JOIN empresas e ON s.empresa_id = e.id WHERE s.stand_id='$stand' LIMIT 1";
+                    $resultadologo=$conexion->query($sql);
+                    if ($resultadologo && $row = $resultadologo->fetch_assoc()) {
+                        $logoUrl = trim($row['logo_url'], '"');
+                        $logoUrl = str_replace('../../', '../', $logoUrl);
+                        echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')" style="background-image: url(\'' . htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') . '\');"></div>';
+                    } else {
+                        echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')">' . $stand . '</div>';
+                    }
                 } else {
                     echo '<div class="stand vacio" data-stand="' . $stand . '">' . $stand . '</div>';
                 }
@@ -94,7 +110,15 @@
             for ($i = 1; $i <= 8; $i++) {
                 $stand = "C" . $i;
                 if (in_array($stand, $ocupados)) {
-                    echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')">' . $stand . '</div>';
+                    $sql="SELECT e.logo_url FROM stands s INNER JOIN empresas e ON s.empresa_id = e.id WHERE s.stand_id='$stand' LIMIT 1";
+                    $resultadologo=$conexion->query($sql);
+                    if ($resultadologo && $row = $resultadologo->fetch_assoc()) {
+                        $logoUrl = trim($row['logo_url'], '"');
+                        $logoUrl = str_replace('../../', '../', $logoUrl);
+                        echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')" style="background-image: url(\'' . htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') . '\');"></div>';
+                    } else {
+                        echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')">' . $stand . '</div>';
+                    }
                 } else {
                     echo '<div class="stand vacio" data-stand="' . $stand . '">' . $stand . '</div>';
                 }
@@ -126,10 +150,18 @@
             }
 
             // Renderizar la fila D (manteniendo la estructura original)
-            for ($i = 1; $i <= 8; $i++) {
+             for ($i = 1; $i <= 8; $i++) {
                 $stand = "D" . $i;
                 if (in_array($stand, $ocupados)) {
-                    echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')">' . $stand . '</div>';
+                    $sql="SELECT e.logo_url FROM stands s INNER JOIN empresas e ON s.empresa_id = e.id WHERE s.stand_id='$stand' LIMIT 1";
+                    $resultadologo=$conexion->query($sql);
+                    if ($resultadologo && $row = $resultadologo->fetch_assoc()) {
+                        $logoUrl = trim($row['logo_url'], '"');
+                        $logoUrl = str_replace('../../', '../', $logoUrl);
+                        echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')" style="background-image: url(\'' . htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') . '\');"></div>';
+                    } else {
+                        echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')">' . $stand . '</div>';
+                    }
                 } else {
                     echo '<div class="stand vacio" data-stand="' . $stand . '">' . $stand . '</div>';
                 }

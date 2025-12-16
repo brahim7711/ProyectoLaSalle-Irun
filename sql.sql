@@ -16,6 +16,7 @@ CREATE TABLE empresas (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_autorizado INT NOT NULL UNIQUE,
     nombre_empresa VARCHAR(255) NOT NULL,
+    contrasena VARCHAR(255) NOT NULL,
     descripcion TEXT NULL,
     logo_url VARCHAR(255) NULL,      
     web_url VARCHAR(255) NULL,       
