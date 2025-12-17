@@ -59,12 +59,13 @@
     }
 
     // MODIFICAR MEET
-    if (isset($_POST["meet"]) && $_POST["meet"] !== "") {
-        $meet = $_POST["meet"];
+    if (isset($_POST["linkMeet"]) && $_POST["linkMeet"] !== "") {
+        $meet = $_POST["linkMeet"];
         $sql = "UPDATE empresas SET meet_url=? WHERE id_autorizado=?";
         $stmt = $conexion->prepare($sql);
         $stmt->bind_param("si", $meet, $idUsuario);
         $stmt->execute();
+        $linkMeet = $meet;
     }
 
     // MODIFICAR NOMBRE
@@ -75,6 +76,7 @@
         $stmt->bind_param("si", $nuevoNombre, $idUsuario);
         $stmt->execute();
         $_SESSION['nombre'] = $nuevoNombre;
+        $nombre = $nuevoNombre;
     }
 
     // MODIFICAR CORREO
@@ -93,6 +95,7 @@
         $stmt = $conexion->prepare($sql);
         $stmt->bind_param("si", $nuevoTel, $idUsuario);
         $stmt->execute();
+        $telefonoActual = $nuevoTel;
     }
 
     // MODIFICAR DESCRIPCIÓN
@@ -102,6 +105,7 @@
         $stmt = $conexion->prepare($sql);
         $stmt->bind_param("si", $newDesc, $idUsuario);
         $stmt->execute();
+        $decripcionActual = $newDesc;
     }
 
     // ACTUALIZAR CONTRASEÑA
@@ -122,12 +126,13 @@
                 $stmt->bind_param("i", $idUsuario);
                 $stmt->execute();
                 $row = $stmt->get_result()->fetch_assoc();
-                $passGuardada = $row['contra'];
+                $passGuardada = $row['contrasena'];
+     
 
-                if (!password_verify($passActual, $passGuardada)) {
+                if (hash("sha256", $passActual) !== $passGuardada) {
                     $mensaje = "La contraseña actual no es correcta";
                 } else {
-                    $hashNueva = password_hash($passNueva, PASSWORD_DEFAULT);
+                    $hashNueva = hash("sha256",$passNueva);
                     $sqlUpdate = "UPDATE empresas SET contrasena=? WHERE id_autorizado=?";
                     $stmt = $conexion->prepare($sqlUpdate);
                     $stmt->bind_param("si", $hashNueva, $idUsuario);
