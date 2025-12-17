@@ -1,6 +1,14 @@
+<?php
+session_start();
+if (isset($_SESSION['idUsuario'])) {
+
+    $idUsuario = $_SESSION['idUsuario'];
+    $nombre = $_SESSION['nombre'];
+    $tipo = $_SESSION['tipo'];
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,10 +27,19 @@
             <button class="btn-nav"><span class="bi bi-list"></span></button>
             <ul class="nav-list">
                 <li><button><a href="../index.php#PROGRAMA">PROGRAMA</a></button></li>
-                <li><button><a href="mapa.php ">MAPA</a></button></li>
-                <li><button><a href="../empresas/empresas.php">EMPRESAS</a></button></li>
+                <li><button><a href="mapa.php ">STAND</a></button></li>
+                <li><button><a href="../empresas/empresas.php">RANKING</a></button></li>
                 <li><button><a href="../index.php#Patrocinadores">CENTROS</a></button></li>
                 <li><button><a href="../contacto/contacto.php">NOSOTROS</a></button></li>
+                <li><button>
+                        <?php
+                        if (!isset($nombre)) {
+                            echo '<a href="../inicioSesion/inicioGeneral.html" id="iniciar">INICIAR SESIÓN</a>';
+                        } elseif ($tipo == 'empresa') {
+                            echo '<a href="../perfilEmpresa/paginaPrivada.php">' . $nombre . '</a>';
+                        } 
+                        ?>
+                </button></li>
             </ul>
         </div>
     </nav>

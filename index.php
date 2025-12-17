@@ -20,11 +20,19 @@
             <button class="btn-nav"><span class="bi bi-list"></span></button>
             <ul class="nav-list">
                 <li><button><a href="index.php#PROGRAMA">PROGRAMA</a></button></li>
-                <li><button><a href="./mapa/mapa.php">MAPA</a></button></li>
-                <li><button><a href="./empresas/empresas.php">EMPRESAS</a></button></li>
+                <li><button><a href="./mapa/mapa.php">STAND</a></button></li>
+                <li><button><a href="./empresas/empresas.php">RANKING</a></button></li>
                 <li><button><a href="index.php#Patrocinadores">CENTROS</a></button></li>
                 <li><button><a href="./contacto/contacto.php">NOSOTROS</a></button></li>
-                <li><button><a href="./inicioSesion/inicioGeneral.html">INICIAR SESIÓN</a></button></li>
+                <li><button>
+                        <?php
+                        if (!isset($nombre)) {
+                            echo '<a href="./inicioSesion/inicioGeneral.html" id="iniciar">INICIAR SESIÓN</a>';
+                        } elseif ($tipo == 'empresa') {
+                            echo '<a href="./perfilEmpresa/paginaPrivada.php">' . $nombre . '</a>';
+                        } 
+                        ?>
+                </button></li>
             </ul>
         </div>
     </nav>

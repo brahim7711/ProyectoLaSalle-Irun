@@ -5,6 +5,12 @@ require_once __DIR__ . '/../bd.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+if (isset($_SESSION['idUsuario'])) {
+
+    $idUsuario = $_SESSION['idUsuario'];
+    $nombre = $_SESSION['nombre'];
+    $tipo = $_SESSION['tipo'];
+}
 
 $mensaje = '';
 $tipo_mensaje = '';

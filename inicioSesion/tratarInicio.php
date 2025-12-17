@@ -29,7 +29,7 @@ $autorizada = $resultAuth->fetch_assoc();
 $idEmpresa = $autorizada['id_autorizado'];
 
 // Ahora buscamos la empresa en la tabla empresas
-$sql = "SELECT id, nombre_empresa, contrasena FROM empresas WHERE id_autorizado = ?";
+$sql = "SELECT id_autorizado, nombre_empresa, contrasena FROM empresas WHERE id_autorizado = ?";
 $stmt = $conexion->prepare($sql);
 if (!$stmt) {
     die("Error SQL empresas: " . $conexion->error);
@@ -53,11 +53,11 @@ if (hash("sha256", $contra) !== $usuario['contrasena']) {
 
 // Crear sesión
 session_start();
-$_SESSION['idUsuario'] = $usuario['id'];
+$_SESSION['idUsuario'] = $usuario['id_autorizado'];
 $_SESSION['nombre'] = $usuario['nombre_empresa'];
 $_SESSION['correo'] = $correo;
 $_SESSION['tipo'] = "empresa";
 
 // Redirigir
-header("Location: ../administrador/panel_admin.php");
+header("Location: ../perfilEmpresa/paginaPrivada.php");
 exit;

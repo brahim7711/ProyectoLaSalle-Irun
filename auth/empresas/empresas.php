@@ -30,7 +30,7 @@ include __DIR__ . '/../../php/auth/empresas.php';
                 </div>
                 <form method="post">
                     <label for="email" class="form-label">Correo Electrónico:</label>
-                    <input type="email" id="correo" name="correo" class="form-control" placeholder="ejemplo@correo.com" required>
+                    <input type="email" id="correo" name="correo" class="form-control"  required>
                     <?php echo $auth_message ?? ''; ?>
                     <input type="submit" name="check_email" value="Comprobar">
                 </form>

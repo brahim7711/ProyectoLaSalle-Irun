@@ -1,6 +1,14 @@
+<?php
+session_start();
+if (isset($_SESSION['idUsuario'])) {
+
+    $idUsuario = $_SESSION['idUsuario'];
+    $nombre = $_SESSION['nombre'];
+    $tipo = $_SESSION['tipo'];
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +21,25 @@
 </head>
 
 <body>
-    <nav class="container navegador bg-dark">
+    <nav class="container navegador">
         <div class="container nav-content">
             <a href="../index.php"><img class="logo" src="../IMAGENES/LOGOlsbm2.png" alt=""></a>
             <button class="btn-nav"><span class="bi bi-list"></span></button>
             <ul class="nav-list">
                 <li><button><a href="../index.php#PROGRAMA">PROGRAMA</a></button></li>
-                <li><button><a href="../mapa/mapa.php">MAPA</a></button></li>
-                <li><button><a href="empresas.php">EMPRESAS</a></button></li>
+                <li><button><a href="../mapa/mapa.php">STANDS</a></button></li>
+                <li><button><a href="empresas.php">RANKING</a></button></li>
                 <li><button><a href="../index.php#Patrocinadores">CENTROS</a></button></li>
                 <li><button><a href="../contacto/contacto.php">NOSOTROS</a></button></li>
+                <li><button>
+                        <?php
+                        if (!isset($nombre)) {
+                            echo '<a href="../inicioSesion/inicioGeneral.html" id="iniciar">INICIAR SESIÓN</a>';
+                        } elseif ($tipo == 'empresa') {
+                            echo '<a href="../perfilEmpresa/paginaPrivada.php">' . $nombre . '</a>';
+                        } 
+                        ?>
+                </button></li>
             </ul>
         </div>
     </nav>
@@ -31,7 +48,7 @@
                 <div class="votaciones-ranking">
                     <?php include("../php/empresas/ranking.php"); ?>
                 </div>
-                </>
+                
             </div>
         </section>
     </main>
