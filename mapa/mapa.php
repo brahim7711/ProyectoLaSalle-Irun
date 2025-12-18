@@ -15,7 +15,6 @@ if (isset($_SESSION['idUsuario'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!--bootstrap 5 CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"><!--bootstrap 5 icons-->
     <link rel="icon" type="image/png" href="../resources/logoico3.png">
-    <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="styles.css">
     <title>LSBM</title>
 </head>
@@ -27,7 +26,7 @@ if (isset($_SESSION['idUsuario'])) {
             <button class="btn-nav"><span class="bi bi-list"></span></button>
             <ul class="nav-list">
                 <li><button><a href="../index.php#PROGRAMA">PROGRAMA</a></button></li>
-                <li><button><a href="mapa.php ">STAND</a></button></li>
+                <li><button><a href="mapa.php ">STANDS</a></button></li>
                 <li><button><a href="../empresas/empresas.php">RANKING</a></button></li>
                 <li><button><a href="../index.php#Patrocinadores">CENTROS</a></button></li>
                 <li><button><a href="../contacto/contacto.php">NOSOTROS</a></button></li>

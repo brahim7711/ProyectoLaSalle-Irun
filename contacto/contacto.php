@@ -28,7 +28,7 @@ if (isset($_SESSION['idUsuario'])) {
             <button class="btn-nav"><span class="bi bi-list"></span></button>
             <ul class="nav-list">
                 <li><button><a href="../index.php#PROGRAMA">PROGRAMA</a></button></li>
-                <li><button><a href="../mapa/mapa.php ">STAND</a></button></li>
+                <li><button><a href="../mapa/mapa.php ">STANDS</a></button></li>
                 <li><button><a href="../empresas/empresas.php">RANKING</a></button></li>
                 <li><button><a href="../index.php#Patrocinadores">CENTROS</a></button></li>
                 <li><button><a href="contacto.php">NOSOTROS</a></button></li>

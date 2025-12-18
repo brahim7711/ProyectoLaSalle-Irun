@@ -52,13 +52,13 @@ if (isset($_SESSION['idUsuario'])) {
             </div>
         </section>
     </main>
-    <footer class="container-fluid">
+    <footer class="container-fluid p-0 m-0">
         <div class="row">
-            <div class="footer-caja1 container-fluid col-sm-12 col-md-12 col-lg-4 pt-3">
+            <div class="footer-caja1 container-fluid col-sm-12 col-md-12 col-lg-3 pt-3">
                 <h4>LA SALLE BUSINESS MATCH</h4>
                 <p>Feria Virtual de Empresas Simuladas</p>
             </div>
-            <div class="footer-caja container-fluid col-sm-12 col-md-4 col-lg-4 pt-3">
+            <div class="footer-caja container-fluid col-sm-12 col-md-4 col-lg-3 pt-3">
                 <h5>ENLACES</h5>
                 <h6><a href="../index.php">INICIO</a></h6>
                 <h6><a href="../index.php#Patrocinadores">CENTROS</a></h6>
@@ -66,7 +66,7 @@ if (isset($_SESSION['idUsuario'])) {
                 <h6><a href="../empresas/empresas.php">EMPRESAS</a></h6>
                 <h6><a href="https://www.freepik.es/autor/upklyak">ILUSTRACIONES</a></h6>
             </div>
-            <div class="footer-caja container-fluid col-sm-12 col-md-4 col-lg-4 pt-3">
+            <div class="footer-caja container-fluid col-sm-12 col-md-4 col-lg-3 pt-3">
                 <h5>CONTACTO</h5>
                 <h6><span class="bi bi-instagram"><a href="https://www.instagram.com/lasallesantoangelzaragoza/?hl=es"> INSTAGRAM</a></span></h6>
                 <h6><span class="bi bi-facebook"><a href="https://www.facebook.com/lasallesantoangelzaragoza/?locale=es_ES"> FACEBOOK</a></span></h6>
