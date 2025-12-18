@@ -46,16 +46,43 @@ if (isset($_SESSION['idUsuario'])) {
     <main>
        <?php include "../php/empresas/ver-empresa.php"?>
        
+       <form method="POST" action="../php/empresas/megusta.php" style="display: inline;">
+           <input type="hidden" name="empresa_id" value="<?php echo isset($_GET['id']) ? $_GET['id'] : (isset($_GET['stand']) ? $empresa['id'] : ''); ?>">
+           <button type="submit" class="btn-megusta-flotante" aria-label="Me gusta esta empresa">
+               <span>Me Gusta</span>
+           </button>
+       </form>
+       
        <button id="btn-votar" class="btn-votar-flotante" aria-label="Votar por esta empresa">
-           <span>★ Votar</span>
+           <span>Votar</span>
        </button>
+       
+       <div id="modal-megusta" class="modal-votacion <?php echo isset($_SESSION['mensaje_megusta']) ? 'active' : ''; ?>">
+           <div class="modal-votacion-content">
+               <button class="modal-votacion-close" id="close-megusta">&times;</button>
+               <div class="modal-votacion-header">
+                   <h2><?php echo isset($_SESSION['tipo_mensaje_megusta']) && $_SESSION['tipo_mensaje_megusta'] === 'success' ? '¡Gracias!' : 'Atención'; ?></h2>
+               </div>
+               <div class="mensaje-votacion <?php echo isset($_SESSION['tipo_mensaje_megusta']) ? $_SESSION['tipo_mensaje_megusta'] : ''; ?>" style="display: block; margin-bottom: 15px;">
+                   <?php 
+                       if (isset($_SESSION['mensaje_megusta'])) {
+                           echo $_SESSION['mensaje_megusta'];
+                           unset($_SESSION['mensaje_megusta']);
+                           unset($_SESSION['tipo_mensaje_megusta']);
+                       }
+                   ?>
+               </div>
+               <div class="form-actions" style="justify-content: center; margin-top: 10px;">
+                   <button type="button" class="btn-votar-submit" id="btn-cerrar-megusta" style="flex: 0 0 auto; max-width: 200px;">Aceptar</button>
+               </div>
+           </div>
+       </div>
        
        <div id="modal-votacion" class="modal-votacion">
            <div class="modal-votacion-content">
                <button class="modal-votacion-close" id="close-votacion">&times;</button>
                <div class="modal-votacion-header">
                    <h2>Vota por esta empresa</h2>
-                   <p>Ingresa tu DNI para registrar tu voto</p>
                </div>
                
                
@@ -63,10 +90,9 @@ if (isset($_SESSION['idUsuario'])) {
                <form id="form-votacion" class="form-votacion" method="POST" action="../php/empresas/votaciones.php">
                    <input type="hidden" id="empresa-id" name="empresa_id" value="<?php echo isset($_GET['id']) ? $_GET['id'] : (isset($_GET['stand']) ? $empresa['id'] : ''); ?>">
                    <div class="form-group">
-                       <label for="dni-voto">DNI/NIE <span class="required">*</span></label>
-                       <input type="text" id="dni-voto" name="dni" placeholder="12345678A" 
-                              pattern="[0-9]{8}[A-Za-z]{1}" required>
-                       <small class="input-help">Formato: 8 números seguidos de una letra</small>
+                       <label for="dni-voto">Correo electrónico <span class="required">*</span></label>
+                       <input type="email" id="correo-voto" name="correo" placeholder="ejemplo@correo.com" required>
+                       <small class="input-help">Usa el correo con el que te inscribiste</small>
                    </div>
                    <div class="form-actions">
                        <button type="submit" class="btn-votar-submit">Enviar Voto</button>
@@ -110,6 +136,32 @@ if (isset($_SESSION['idUsuario'])) {
 
     <script src="../js-menu.js"></script>
     <script src="./scrip.js"></script>
+    <script>
+        // Manejo del modal de Me Gusta
+        const modalMegusta = document.getElementById('modal-megusta');
+        const closeMegusta = document.getElementById('close-megusta');
+        const btnCerrarMegusta = document.getElementById('btn-cerrar-megusta');
+        
+        if (closeMegusta) {
+            closeMegusta.addEventListener('click', function() {
+                modalMegusta.classList.remove('active');
+            });
+        }
+        
+        if (btnCerrarMegusta) {
+            btnCerrarMegusta.addEventListener('click', function() {
+                modalMegusta.classList.remove('active');
+            });
+        }
+        
+        if (modalMegusta) {
+            modalMegusta.addEventListener('click', function(e) {
+                if (e.target === modalMegusta) {
+                    modalMegusta.classList.remove('active');
+                }
+            });
+        }
+    </script>
 
 </body>
 

@@ -369,7 +369,7 @@ body{
 
 .primero {
     position: relative;
-    height: 100vh;
+    height: 50vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -758,6 +758,40 @@ body{
     box-shadow: 0 8px 25px rgba(239, 184, 16, 0.6);
 }
 
+.btn-megusta-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 210px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0 10px 30px rgba(239, 184, 16, 0.5);
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-megusta-flotante:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(239, 184, 16, 0.7);
+    background: linear-gradient(135deg, #d4a406 0%, var(--primary-color) 100%);
+}
+
+.btn-megusta-flotante:active {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(239, 184, 16, 0.6);
+}
+
 .modal-votacion {
     position: fixed;
     top: 0;
@@ -822,7 +856,7 @@ body{
 }
 
 .modal-votacion-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -878,7 +912,7 @@ body{
     color: #dc3545;
 }
 
-.form-votacion input[type="text"] {
+.form-votacion input[type="email"] {
     width: 100%;
     padding: 15px 20px;
     border-radius: 12px;
@@ -892,7 +926,7 @@ body{
     box-sizing: border-box;
 }
 
-.form-votacion input[type="text"]:focus {
+.form-votacion input[type="email"]:focus {
     border-color: var(--primary-color);
     background: white;
     box-shadow: 0 0 0 4px rgba(239, 184, 16, 0.15);
@@ -962,6 +996,13 @@ body{
         font-size: 0.95rem;
     }
     
+    .btn-megusta-flotante {
+        bottom: 20px;
+        right: 160px;
+        padding: 14px 25px;
+        font-size: 0.95rem;
+    }
+    
     .modal-votacion-content {
         width: 95%;
     }
@@ -982,6 +1023,14 @@ body{
 @media (max-width: 480px) {
     .btn-votar-flotante {
         bottom: 15px;
+        right: 15px;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+    
+    .btn-megusta-flotante {
+        bottom: 70px;
         right: 15px;
         padding: 12px 20px;
         font-size: 0.85rem;

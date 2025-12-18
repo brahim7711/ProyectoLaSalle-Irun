@@ -1,8 +1,5 @@
 <?php
-if (!isset($_SESSION['admin_logeado']) || $_SESSION['admin_logeado'] !== true) {
-    header("Location: ../../auth/administracion/administracion.php");
-    exit();
-}
+
 
 $mensaje = '';
 $tipo_mensaje = '';

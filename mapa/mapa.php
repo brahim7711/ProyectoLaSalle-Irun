@@ -15,6 +15,7 @@ if (isset($_SESSION['idUsuario'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!--bootstrap 5 CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"><!--bootstrap 5 icons-->
     <link rel="icon" type="image/png" href="../resources/logoico3.png">
+    <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="styles.css">
     <title>LSBM</title>
 </head>
@@ -36,7 +37,9 @@ if (isset($_SESSION['idUsuario'])) {
                             echo '<a href="../inicioSesion/inicioGeneral.html" id="iniciar">INICIAR SESIÓN</a>';
                         } elseif ($tipo == 'empresa') {
                             echo '<a href="../perfilEmpresa/paginaPrivada.php">' . $nombre . '</a>';
-                        } 
+                        }elseif ($tipo == 'administrador') {
+                            echo '<a href="../administrador/panel_admin.php">ADMIN</a>';
+                        }   
                         ?>
                 </button></li>
             </ul>

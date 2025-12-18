@@ -30,7 +30,12 @@ if ($empresa) {
         $spotUrl = 'https://www.youtube.com/embed/' . $id[1];
     }
     
-    echo '<section class="primero" style="background-image: url(\'' . htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') . '\');">
+    echo '<section class="primero" 
+    style="
+    background-image: url(\'' . htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') . '\');
+    background-size=50%;
+    
+    ">
             <h1>' . htmlspecialchars($empresa['nombre_empresa'], ENT_QUOTES, 'UTF-8') . '</h1>
           </section>
           

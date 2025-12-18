@@ -6,11 +6,11 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $dni = trim($_POST['dni']);
+    $correo = trim($_POST['correo']);
     $empresa_id = intval($_POST['empresa_id']);
 
-    if (empty($dni)) {
-        $_SESSION['mensaje_votacion'] = 'El DNI es obligatorio';
+    if (empty($correo)) {
+        $_SESSION['mensaje_votacion'] = 'El correo electrónico es obligatorio';
         $_SESSION['tipo_mensaje_votacion'] = 'error';
         header('Location: ' . $_SERVER['HTTP_REFERER']);
         exit;
@@ -23,16 +23,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    if (!preg_match('/^[0-9]{8}[A-Za-z]{1}$/', $dni)) {
-        $_SESSION['mensaje_votacion'] = 'Formato de DNI inválido. Debe ser 8 números seguidos de una letra';
+    if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+        $_SESSION['mensaje_votacion'] = 'Formato de correo electrónico inválido';
         $_SESSION['tipo_mensaje_votacion'] = 'error';
         header('Location: ' . $_SERVER['HTTP_REFERER']);
         exit;
     }
 
-    $sql_inscripcion = "SELECT id FROM inscripciones WHERE dni = ?";
+    $sql_inscripcion = "SELECT id FROM inscripciones WHERE correo = ?";
     $stmt_inscripcion = $conexion->prepare($sql_inscripcion);
-    $stmt_inscripcion->bind_param("s", $dni);
+    $stmt_inscripcion->bind_param("s", $correo);
     $stmt_inscripcion->execute();
     $result_inscripcion = $stmt_inscripcion->get_result();
     $inscripcion = $result_inscripcion->fetch_assoc();
