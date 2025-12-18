@@ -64,8 +64,8 @@ if (isset($_SESSION['idUsuario'])) {
                 <h5>ENLACES</h5>
                 <h6><a href="../index.php">INICIO</a></h6>
                 <h6><a href="../index.php#Patrocinadores">CENTROS</a></h6>
-                <h6><a href="../mapa/mapa-titulo">MAPA</a></h6>
-                <h6><a href="../empresas/empresas.php">EMPRESAS</a></h6>
+                <h6><a href="../mapa/mapa.php">STANDS</a></h6>
+                <h6><a href="empresas.php">RANKING</a></h6>
                 <h6><a href="https://www.freepik.es/autor/upklyak">ILUSTRACIONES</a></h6>
             </div>
             <div class="footer-caja container-fluid col-sm-12 col-md-4 col-lg-3 pt-3">
@@ -84,9 +84,12 @@ if (isset($_SESSION['idUsuario'])) {
             </div>
         </div>
     </footer>
-    <script src="../js-menu.js"></script>
+
+    
+   
     
 
 </body>
+<script src="../JS/menu.js"></script>
 
 </html>

@@ -797,7 +797,7 @@ footer{
     display: none;
    }
    main{
-    background-image: url(../IMAGENES/bg-movil.jpg);
+    background-image: url(./IMAGENES/bg-movil.jpg);
     background-size: 120%;
    }
    .img-main{

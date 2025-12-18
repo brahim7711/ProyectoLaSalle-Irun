@@ -207,10 +207,10 @@ if (isset($_SESSION['idUsuario'])) {
             </div>
             <div class="footer-caja container-fluid col-sm-12 col-md-4 col-lg-4 pt-3">
                 <h5>ENLACES</h5>
-                <h6><a href="index.php">INICIO</a></h6>
-                <h6><a href="index.php#Patrocinadores">PATROCINADORES</a></h6>
-                <h6><a href="participantes.php">VOTACIÓN</a></h6>
-                <h6><a href="nosotros.php">NOSOTROS</a></h6>
+                <h6><a href="../index.php">INICIO</a></h6>
+                <h6><a href="../index.php#Patrocinadores">CENTROS</a></h6>
+                <h6><a href="../mapa/mapa.php">STANDS</a></h6>
+                <h6><a href="contacto.php">NOSOTROS</a></h6>
                 <h6><a href="https://www.freepik.es/autor/upklyak">ILUSTRACIONES</a></h6>
             </div>
             <div class="footer-caja container-fluid col-sm-12 col-md-4 col-lg-4 pt-3">
@@ -232,6 +232,7 @@ if (isset($_SESSION['idUsuario'])) {
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./JS/perfil.js"></script>
+<script src="../JS/menu.js"></script>
 <!--<script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
         <script src="https://files.bpcontent.cloud/2025/10/10/16/20251010162421-YDPBONI7.js" defer></script>-->
 

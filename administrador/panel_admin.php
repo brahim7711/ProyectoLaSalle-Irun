@@ -266,8 +266,8 @@ include('../php/administrador/procesar_admin.php');
                 <h5>ENLACES</h5>
                 <h6><a href="../index.php">INICIO</a></h6>
                 <h6><a href="../index.php#Patrocinadores">CENTROS</a></h6>
-                <h6><a href="mapa.php">MAPA</a></h6>
-                <h6><a href="../empresas/empresas.php">EMPRESAS</a></h6>
+                <h6><a href="../mapa/mapa.php">STANDS</a></h6>
+                <h6><a href="../empresas/empresas.php">RANKING</a></h6>
                 <h6><a href="https://www.freepik.es/autor/upklyak">ILUSTRACIONES</a></h6>
             </div>
             <div class="footer-caja container-fluid col-sm-12 col-md-4 col-lg-4 pt-3">

@@ -87,8 +87,6 @@ if (isset($_SESSION['idUsuario'])) {
                    <h2>Vota por esta empresa</h2>
                </div>
                
-               
-               
                <form id="form-votacion" class="form-votacion" method="POST" action="../php/empresas/votaciones.php">
                    <input type="hidden" id="empresa-id" name="empresa_id" value="<?php echo isset($_GET['id']) ? $_GET['id'] : (isset($_GET['stand']) ? $empresa['id'] : ''); ?>">
                    <div class="form-group">
@@ -115,8 +113,8 @@ if (isset($_SESSION['idUsuario'])) {
                 <h5>ENLACES</h5>
                 <h6><a href="../index.php">INICIO</a></h6>
                 <h6><a href="../index.php#Patrocinadores">CENTROS</a></h6>
-                <h6><a href="mapa.php">MAPA</a></h6>
-                <h6><a href="../empresas/empresas.php">EMPRESAS</a></h6>
+                <h6><a href="../mapa/mapa.php">STANDS</a></h6>
+                <h6><a href="empresas.php">EMPRESAS</a></h6>
                 <h6><a href="https://www.freepik.es/autor/upklyak">ILUSTRACIONES</a></h6>
             </div>
             <div class="footer-caja container-fluid col-sm-12 col-md-4 col-lg-4 pt-3">
@@ -136,8 +134,9 @@ if (isset($_SESSION['idUsuario'])) {
         </div>
     </footer>
 
-    <script src="../js-menu.js"></script>
+   
     <script src="./scrip.js"></script>
+    <script src="../JS/menu.js"></script>
     <script>
         // Manejo del modal de Me Gusta
         const modalMegusta = document.getElementById('modal-megusta');
