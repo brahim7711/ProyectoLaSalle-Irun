@@ -37,7 +37,9 @@ if (isset($_SESSION['idUsuario'])) {
                             echo '<a href="../inicioSesion/inicioGeneral.html" id="iniciar">INICIAR SESIÓN</a>';
                         } elseif ($tipo == 'empresa') {
                             echo '<a href="../perfilEmpresa/paginaPrivada.php">' . $nombre . '</a>';
-                        } 
+                        }elseif ($tipo == 'administrador') {
+                            echo '<a href="../administrador/panel_admin.php">ADMIN</a>';
+                        }    
                         ?>
                 </button></li>
             </ul>

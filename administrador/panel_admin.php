@@ -7,6 +7,11 @@ if (isset($_SESSION['idUsuario'])) {
     $nombre = $_SESSION['nombre'];
     $tipo = $_SESSION['tipo'];
 }
+if($tipo!="administrador"){
+    header("Location: ../index.php");
+            exit;
+        
+}
 
 include('../php/bd.php');
 include('../php/administrador/procesar_admin.php');
