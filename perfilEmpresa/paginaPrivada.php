@@ -27,7 +27,7 @@
     require '../php/bd.php';
 
     // Cargar datos de la empresa
-    $sqlInfo = "SELECT nombre_empresa, contacto_adicional, descripcion, web_url, spot_url, meet_url FROM empresas WHERE id_autorizado = ?";
+    $sqlInfo = "SELECT nombre_empresa, contacto_adicional, descripcion, web_url, spot_url, meet_url, logo_url FROM empresas WHERE id_autorizado = ?";
     $stmtInfo = $conexion->prepare($sqlInfo);
     $stmtInfo->bind_param("i", $idUsuario);
     $stmtInfo->execute();
@@ -39,8 +39,15 @@
     $correoActual = $correo;
     $telefonoActual = $datos["contacto_adicional"];
     $decripcionActual = $datos["descripcion"];
-
+    $logo  = $datos["logo_url"];
     $mensaje = ""; // mensaje de error o éxito
+
+    //la ruta relativa
+
+    $RutaIcono = str_replace("../../", "", $logo);
+    $RutaIconoExplode = explode("/", $logo);
+
+
 
     // MODIFICAR VIDEO
     if (isset($_POST["url"]) && $_POST["url"] !== "") {
@@ -108,6 +115,19 @@
         $decripcionActual = $newDesc;
     }
 
+    //Remplazar el logo manteniendo el mismo nombre
+    if (isset($_FILES['logoNuevo']['tmp_name'])) {
+        unlink("../" . $RutaIcono);
+
+
+        $carpetaDestino = "../resources/logos-empresas/";
+
+        $rutaFinal = $carpetaDestino . $RutaIconoExplode[4];
+
+        if (!move_uploaded_file($_FILES['logoNuevo']['tmp_name'], $rutaFinal)) {
+            $nombreUnico = null;
+        }
+    }
     // ACTUALIZAR CONTRASEÑA
     if (isset($_POST['btnCambiarPass'])) {
         $passActual = $_POST['passActual'] ?? '';
@@ -127,12 +147,12 @@
                 $stmt->execute();
                 $row = $stmt->get_result()->fetch_assoc();
                 $passGuardada = $row['contrasena'];
-     
+
 
                 if (hash("sha256", $passActual) !== $passGuardada) {
                     $mensaje = "La contraseña actual no es correcta";
                 } else {
-                    $hashNueva = hash("sha256",$passNueva);
+                    $hashNueva = hash("sha256", $passNueva);
                     $sqlUpdate = "UPDATE empresas SET contrasena=? WHERE id_autorizado=?";
                     $stmt = $conexion->prepare($sqlUpdate);
                     $stmt->bind_param("si", $hashNueva, $idUsuario);
@@ -200,9 +220,14 @@
                             Contraseña
                         </button>
                     </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pass-tab" data-bs-toggle="tab" data-bs-target="#icono" type="button" role="tab">
+                            Icono
+                        </button>
+                    </li>
                 </ul>
 
-                <form method="POST">
+                <form method="POST" enctype="multipart/form-data">
                     <div class="tab-content" id="myTabContent">
                         <!-- TAB 1 DATOS -->
                         <div class="tab-pane fade show active" id="info" role="tabpanel">
@@ -235,7 +260,7 @@
                                 <div class="col-md-6">
                                     <div class="ratio ratio-16x9">
                                         <iframe src="<?php echo $link ?>" frameborder="0" allowfullscreen></iframe>
-                                    </div>   
+                                    </div>
                                 </div>
 
                                 <div class="col-md-6">
@@ -276,8 +301,25 @@
 
                         </div>
 
+                        <!-- TAB 5 Icono -->
+                        <div class="tab-pane fade" id="icono" role="tabpanel">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="ratio ratio-16x9">
+                                        <image src="../<?php echo $RutaIcono ?>"></image>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Cambiar logo</label>
+                                    <input type="file" id="logo" name="logoNuevo" class="form-control" accept="image/*">
+                                </div>
+                            </div>
+                        </div>
+
                         <?php if ($mensaje != "") { ?>
-                            <div class="alert <?php echo ($mensaje === 'Contraseña actualizada correctamente') ? 'alert-success' : 'alert-danger'; ?> mt-2">
+                            <div class=" alert <?php echo ($mensaje === 'Contraseña actualizada correctamente') ? 'alert-success' : 'alert-danger'; ?> mt-2">
                                 <?php echo $mensaje; ?>
                             </div>
                         <?php } ?>
@@ -287,7 +329,7 @@
                     <div class="text-end mt-1">
                         <button type="submit" class="btn btn-primary" name="btnCambiarPass">Guardar Cambios</button>
                         <a href="cerrarSesion.php" class="btn btn-danger">Cerrar Sesión</a>
-                        
+
                     </div>
                 </form>
             </div>

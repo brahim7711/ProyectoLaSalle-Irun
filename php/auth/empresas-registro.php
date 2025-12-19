@@ -32,20 +32,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['confirmar'])) {
         } else {
             $stmt->close();
 
-            // TEMA DE SUBIR LA IMAGEN A UNA CARPETA
-            $archivo_temporal = $_FILES['logo']['tmp_name'] ?? null;
-            $nombre_original = basename($_FILES['logo']['name'] ?? '');
-            $ruta_final = $directorio_subida . $nombre_original;
+            $extension = strtolower(pathinfo($_FILES['logo']['name'], PATHINFO_EXTENSION));
 
-            // Comprobar que el archivo se haya subido realmente y moverlo AHORA
-            if ($archivo_temporal && is_uploaded_file($archivo_temporal)) {
-                if (!move_uploaded_file($archivo_temporal, $ruta_final)) {
-                    //MOVER AQUI EL LOGO 
-                }
+            $carpetaDestino = "../../resources/logos-empresas/";
+            if (!file_exists($carpetaDestino)) {
+                mkdir($carpetaDestino, 0777, true);
             }
+
+            $nombreUnico = uniqid("img_", true) . "." . $extension;
+            $rutaFinal = $carpetaDestino . $nombreUnico;
+
+            if (!move_uploaded_file($_FILES['logo']['tmp_name'], $rutaFinal)) {
+                $nombreUnico = null;
+            }
+
+
+
+
+
+
+
 
             //Hash de la contraseña
             $password = hash("sha256", $_POST['contrasena_empresa']);
+
+            //Pasar el link del meet de watch?v= a embed/
+            $url = $_POST['spot_url'];
+            if (strpos($url, "youtube.com/watch?v=") !== false) {
+                $videoID = explode("&", explode("v=", $url)[1])[0];
+                $link = "https://www.youtube.com/embed/" . $videoID;
+            } elseif (strpos($url, "youtu.be/") !== false) {
+                $videoID = explode("?", explode("youtu.be/", $url)[1])[0];
+                $link = "https://www.youtube.com/embed/" . $videoID;
+            }
 
 
             // SI ESTÁ AUTORIZADA, HACER EL INSERT EN LA TABLA empresas
@@ -55,10 +74,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['confirmar'])) {
                 $id_autorizado,
                 $_POST['nombre_empresa'],
                 $_POST['descripcion'],
-                $ruta_final,
+                $rutaFinal,
                 $password,
                 $_POST['web_url'],
-                $_POST['spot_url'],
+                $link,
                 $_POST['contacto_adicional'],
                 $_POST['horario'],
                 $_POST['meet_url']
