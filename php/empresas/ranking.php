@@ -33,13 +33,14 @@ if ($result && $result->num_rows > 0) {
             $claseRanking = 'ranking-normal';
         }
 
-        echo '<div class="ranking-card ' . $claseRanking . '" onclick="window.location.href=\'ver-empresa.php?id=' . $row['id'] . '\'">
-                <div class="ranking-logo" style="background-image: url(\'' . htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') . '\');"></div>
-                <div class="ranking-info">
-                    <h3 class="ranking-empresa">' . htmlspecialchars($row['nombre_empresa'], ENT_QUOTES, 'UTF-8') . '</h3>
-                    <p class="ranking-votos">' . $row['total_votos'] . ' ' . ($row['total_votos'] == 1 ? 'voto' : 'votos') . '</p>
-                </div>
-              </div>';
+                echo '<div class="ranking-card ' . $claseRanking . '" onclick="window.location.href=\'ver-empresa.php?id=' . $row['id'] . '\'">'
+                                . '<div class="ranking-position">' . $posicion . '</div>'
+                                . '<div class="ranking-logo" style="background-image: url(\'' . htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') . '\');"></div>'
+                                . '<div class="ranking-info">'
+                                        . '<h3 class="ranking-empresa">' . htmlspecialchars($row['nombre_empresa'], ENT_QUOTES, 'UTF-8') . '</h3>'
+                                        . '<p class="ranking-votos">' . $row['total_votos'] . ' ' . ($row['total_votos'] == 1 ? 'voto' : 'votos') . '</p>'
+                                . '</div>'
+                            . '</div>';
         
         $posicion++;
         
