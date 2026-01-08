@@ -225,6 +225,11 @@
                             Icono
                         </button>
                     </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pass-tab" data-bs-toggle="tab" data-bs-target="#megustas" type="button" role="tab">
+                            Me gustas
+                        </button>
+                    </li>
                 </ul>
 
                 <form method="POST" enctype="multipart/form-data">
@@ -318,12 +323,24 @@
                             </div>
                         </div>
 
+                        <!-- TAB 6 Me gusta -->
+                        <div class="tab-pane fade" id="megustas" role="tabpanel">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Google Meet</label>
+                                    <input type="text" class="form-control" name="linkMeet" value="<?php echo $linkMeet; ?>">
+                                </div>
+                            </div>
+                        </div>
+
                         <?php if ($mensaje != "") { ?>
                             <div class=" alert <?php echo ($mensaje === 'Contraseña actualizada correctamente') ? 'alert-success' : 'alert-danger'; ?> mt-2">
                                 <?php echo $mensaje; ?>
                             </div>
                         <?php } ?>
                     </div>
+
+                    
 
                     <!-- BOTÓN GLOBAL -->
                     <div class="text-end mt-1">
