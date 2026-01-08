@@ -122,7 +122,7 @@
                         <p>Tu voto puede marcar la diferencia.</p>
                     </div>
                     <div class="container-fluid d-flex justify-content-center">
-                        <button class="btn1"><a href="participantes.php">VOTAR</a></button>
+                        <button class="btn1"><a href="./mapa/mapa.php">VOTAR</a></button>
                     </div>
                 </div>
             </div>
