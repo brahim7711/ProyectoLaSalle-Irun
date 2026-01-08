@@ -27,7 +27,7 @@
                     <label for="nombre_empresa">Nombre de la Empresa <span class="required">*</span></label>
                     <input type="text" id="nombre_empresa" class="form-control" name="nombre_empresa" placeholder="Nombre de tu empresa" required>
                     <label for="contrasena_empresa">Contraseña<span class="required">*</span></label>
-                    <input type="password" id="contrasena_empresa" class="form-control" name="contrasena_empresa" placeholder="Nombre de tu empresa" required>
+                    <input type="password" id="contrasena_empresa" class="form-control" name="contrasena_empresa" placeholder="Contraseña de tu empresa" required>
                     <label for="descripcion">Descripción</label>
                     <textarea id="descripcion" name="descripcion" class="form-control" rows="4" placeholder="Describe tu empresa"></textarea>
                     <label for="logo">Logo de la Empresa</label>

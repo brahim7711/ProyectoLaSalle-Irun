@@ -36,7 +36,7 @@ include('../php/administrador/procesar_admin.php');
             <button class="btn-nav"><span class="bi bi-list"></span></button>
             <ul class="nav-list">
                 <li><button><a href="../index.php#PROGRAMA">PROGRAMA</a></button></li>
-                <li><button><a href="mapa.php ">STANDS</a></button></li>
+                <li><button><a href="../mapa/mapa.php ">STANDS</a></button></li>
                 <li><button><a href="../empresas/empresas.php">RANKING</a></button></li>
                 <li><button><a href="../index.php#Patrocinadores">CENTROS</a></button></li>
                 <li><button><a href="../contacto/contacto.php">NOSOTROS</a></button></li>
