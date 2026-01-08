@@ -327,8 +327,9 @@
                         <div class="tab-pane fade" id="megustas" role="tabpanel">
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <label class="form-label">Google Meet</label>
-                                    <input type="text" class="form-control" name="linkMeet" value="<?php echo $linkMeet; ?>">
+                                    <label class="form-label">Estas son las empresas que te han dado me gusta</label>
+                                    <br>
+                                    <?php include '../php/empresas/megustas.php'; ?>
                                 </div>
                             </div>
                         </div>
