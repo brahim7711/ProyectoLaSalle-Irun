@@ -1,6 +1,7 @@
 <?php include __DIR__ . '/php/inscribete/inscribete.php'; ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>PROYECTO</title>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" lang="es">
@@ -30,11 +31,11 @@
                             echo '<a href="./inicioSesion/inicioGeneral.html" id="iniciar">INICIAR SESIÓN</a>';
                         } elseif ($tipo == 'empresa') {
                             echo '<a href="./perfilEmpresa/paginaPrivada.php">' . $nombre . '</a>';
-                        }elseif ($tipo == 'administrador') {
+                        } elseif ($tipo == 'administrador') {
                             echo '<a href="administrador/panel_admin.php">ADMIN</a>';
-                        }   
+                        }
                         ?>
-                </button></li>
+                    </button></li>
             </ul>
         </div>
     </nav>
@@ -68,15 +69,15 @@
         <div class="container-fluid programa-content row m-0 py-5">
             <div class="container-fluid col-5 pc">
                 <div class="caja">
-                    <h4>ACTO INAUGURAL</h4>
+                    <h4>ACTO INAUGURAL <br> <a id="enlacesAcceso" href="https://meet.google.com/bpm-mbns-njb">Acceder</a> </h4>
                 </div>
                 <div class="caja"></div>
                 <div class="caja">
-                    <h4>FERIA VIRTUAL SESIÓN MAÑANA</h4>
+                    <h4>INICIO DE LA FERIA</h4>
                 </div>
                 <div class="caja"></div>
                 <div class="caja">
-                    <h4>CLAUSURA DE LA FERIA</h4>
+                    <h4>CLAUSURA DE LA FERIA <br> <a id="enlacesAcceso" href="https://meet.google.com/bpm-mbns-njb">Acceder</a></h4>
                 </div>
             </div>
             <div class="container-fluid col-2 linea px-1">
@@ -84,26 +85,26 @@
                     <h5 class="">9:00</h5>
                 </div>
                 <div class="caja4 punto">
-                    <h5 class="ps-5">9:15</h5>
+                    <h5 class="ps-5">9:30</h5>
                 </div>
                 <div class="caja3 punto">
                     <h5>10:00</h5>
                 </div>
                 <div class="caja4 punto">
-                    <h5 class="ps-5">15:30</h5>
+                    <h5 class="ps-5">17:00</h5>
                 </div>
                 <div class="caja5 punto">
-                    <h5>18:30</h5>
+                    <h5>17:15</h5>
                 </div>
             </div>
             <div class="container-fluid col-5 pc">
                 <div class="caja"></div>
                 <div class="caja">
-                    <h4>CONFERENCIA: EMPRENDER CON LLUIS VALLS</h4>
+                    <h4>CONFERENCIA: EMPRENDER CON YERAY MATEOS (EYWA SPACE) <br> <a id="enlacesAcceso" href="https://meet.google.com/bpm-mbns-njb">Acceder</a></h4>
                 </div>
                 <div class="caja"></div>
                 <div class="caja">
-                    <h4>FERIA VIRTUAL SESIÓN TARDE</h4>
+                    <h4>FIN DE LA FERIA</h4>
                 </div>
                 <div class="caja"></div>
             </div>
@@ -131,42 +132,43 @@
         </div>
     </div>
     <div id="modal-inscribete" class="modal-overlay <?php echo (!empty($mensaje)) ? 'active' : ''; ?>">
-            <div class="modal-content">
-                <button class="modal-close" id="close-modal">&times;</button>
-                <div class="modal-header">
-                    <h2>Inscríbete a la Feria</h2>
-                    <p>Completa el formulario para inscribirte</p>
-                </div>
-                
-                <?php if (!empty($mensaje)): ?>
-                    <div class="message-container show">
-                        <p class="<?php echo $tipo_mensaje; ?>-message"><?php echo htmlspecialchars($mensaje); ?></p>
-                    </div>
-                <?php endif; ?>
-                
-                <form class="form-inscripcion" id="form-inscripcion" method="POST" >
-                    <div class="form-group">
-                        <label for="nombre">Nombre <span class="required">*</span></label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre"  required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="apellidos">Apellidos <span class="required">*</span></label>
-                        <input type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos"  required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="correo">Correo Electrónico <span class="required">*</span></label>
-                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com"  required>
-                    </div>
-
-                    <div class="form-actions">
-                        <button type="submit" class="btn-submit" name="aceptar" value="1">Enviar Inscripción</button>
-                        <button type="button" class="btn-cancel" id="cancel-btn">Cancelar</button>
-                    </div>
-                </form>
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2>Inscríbete a la Feria</h2>
+                <p>Completa el formulario para inscribirte</p>
             </div>
+
+            <?php if (!empty($mensaje)): ?>
+                <div class="message-container show">
+                    <p class="<?php echo $tipo_mensaje; ?>-message"><?php echo htmlspecialchars($mensaje); ?></p>
+                </div>
+            <?php endif; ?>
+
+            <form class="form-inscripcion" id="form-inscripcion" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre <span class="required">*</span></label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos <span class="required">*</span></label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico <span class="required">*</span></label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit" name="aceptar" value="1">Enviar Inscripción</button>
+                    <button type="button" class="btn-cancel" id="cancel-btn">Cancelar</button>
+                </div>
+            </form>
         </div>
+    </div>
     <div class="container-fluid s-caja caja22 pt-5 ">
         <div class="container titulo2 pt-5 p-0 m-0">
             <h1>🏆GANADOR SPORT PUBLICITARIO 2025🏆</h1>
@@ -281,18 +283,19 @@
 <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2025/10/10/16/20251010162421-YDPBONI7.js" defer></script>
 <!-- API EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- Pasar datos PHP a JavaScript PARA EL CORREO -->
-    <script>
-        window.emailConfig = {
-            enviarEmail: <?php echo $enviar_email ? 'true' : 'false'; ?>,
-            datosEmail: {
-                nombre: "<?php echo isset($datos_email['nombre']) ? htmlspecialchars($datos_email['nombre']) : ''; ?>",
-                email: "<?php echo isset($datos_email['email']) ? htmlspecialchars($datos_email['email']) : ''; ?>"
-            }
-        };
-    </script>
-    
-    <script src="js-menu.js"></script>
-    <script src="scrip.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- Pasar datos PHP a JavaScript PARA EL CORREO -->
+<script>
+    window.emailConfig = {
+        enviarEmail: <?php echo $enviar_email ? 'true' : 'false'; ?>,
+        datosEmail: {
+            nombre: "<?php echo isset($datos_email['nombre']) ? htmlspecialchars($datos_email['nombre']) : ''; ?>",
+            email: "<?php echo isset($datos_email['email']) ? htmlspecialchars($datos_email['email']) : ''; ?>"
+        }
+    };
+</script>
+
+<script src="js-menu.js"></script>
+<script src="scrip.js"></script>
+
 </html>
