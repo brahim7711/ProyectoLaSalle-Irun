@@ -36,25 +36,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['aceptar']) && !empty(
     $nombre = trim($_POST['nombre']);
     $apellidos = trim($_POST['apellidos']);
     $correo = trim($_POST['correo']);
-    $dni = trim($_POST['dni']);
     $nombreCompleto = $nombre . ' ' . $apellidos;
 
     // Validar que el correo no esté ya registrado
-    $stmt = $conexion->prepare("SELECT COUNT(*) FROM inscripciones WHERE dni = ? or email = ?");
-    $stmt->bind_param("ss", $dni, $correo);
+    $stmt = $conexion->prepare("SELECT COUNT(*) FROM inscripciones WHERE email = ?");
+    $stmt->bind_param("s", $correo);
     $stmt->execute();
     $stmt->bind_result($count);
     $stmt->fetch();
     $stmt->close();
 
     if ($count > 0) {
-        $_SESSION['mensaje'] = 'El correo electrónico o DNI ya están registrados.';
+        $_SESSION['mensaje'] = 'El correo electrónico ya están registrados.';
         $_SESSION['tipo_mensaje'] = 'error';
         $_SESSION['enviar_email'] = false;
     } else {
         // Insertar el nuevo inscrito en la base de datos
-        $stmt = $conexion->prepare("INSERT INTO inscripciones (nombre, apellidos, dni, email) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $nombre, $apellidos, $dni, $correo);
+        $stmt = $conexion->prepare("INSERT INTO inscripciones (nombre, apellidos, email) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $nombre, $apellidos, $correo);
 
         if ($stmt->execute()) {
             $_SESSION['mensaje'] = 'Inscripción realizada con éxito. Te hemos enviado un correo de confirmación.';

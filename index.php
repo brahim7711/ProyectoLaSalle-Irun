@@ -160,13 +160,6 @@
                         <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com"  required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="dni">DNI/NIE <span class="required">*</span></label>
-                        <input type="text" id="dni" name="dni" placeholder="12345678A" pattern="[0-9]{8}[A-Za-z]{1}" 
-                            required>
-                        <small class="input-help">Formato: 8 números seguidos de una letra</small>
-                    </div>
-
                     <div class="form-actions">
                         <button type="submit" class="btn-submit" name="aceptar" value="1">Enviar Inscripción</button>
                         <button type="button" class="btn-cancel" id="cancel-btn">Cancelar</button>

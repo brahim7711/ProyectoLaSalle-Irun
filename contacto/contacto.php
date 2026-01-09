@@ -77,7 +77,7 @@ if (isset($_SESSION['idUsuario'])) {
             </div>
             <div class="miembro col-sm-8 col-md-12 col-lg-4 carta mt-2 p-0">
                 <div class="container-fluid caja-img">
-                    <img class="card-img-top" src="../resources/rafa.jpeg" alt="Card image cap">
+                    <img class="card-img-top" src="../IMAGENES/RAFAAAA.png" alt="Card image cap">
                 </div>
                 <div class="text-miembros">
                     <h4 class="card-title mb-2">Rafael Navarro</h4>
@@ -155,15 +155,11 @@ if (isset($_SESSION['idUsuario'])) {
                 <div class="fotoirun col-sm-12 col-md-12 col-lg-6 p-0"></div>
                 <div class="col-sm-12 col-md-12 col-lg-5 text-irun pt-3">
                     <p>
-                        Los organizadores de <strong>fotodeclasede2ADIR</strong> —
-                        Lucía Herrera Martínez, Sergio Ramírez Beltrán, Marina Castillo Rojas,
-                        Álvaro Méndez Llorente, Paula Torres Alcántara y Héctor Villalba Serrano —
-                        desarrollaron este proyecto tras su participación en <strong>La Salle Business Match y Feria Virtual</strong>.
-                    </p>
-                    <p>
-                        La fotografía fue tomada durante su encuentro presencial en Zaragoza, donde consolidaron su colaboración.
-                        El proyecto contó además con el apoyo de <strong>Eclipse Eventos</strong> y <strong>Brillos y Recuerdos</strong>,
-                        manteniendo siempre un enfoque grupal y sin incluir fotos individuales.
+                        La participación conjunta de ambos centros refuerza los valores de colaboración, 
+                        convivencia y <strong>espíritu La Salle</strong> , convirtiendo la feria en una experiencia enriquecedora 
+                        para todos los asistentes. Este evento permite visibilizar el esfuerzo realizado 
+                        en el aula y fomenta el intercambio de experiencias y el aprendizaje mutuo, dejando 
+                        una huella positiva en el alumnado y en toda la comunidad educativa.
                     </p>
                 </div>
             </div>
