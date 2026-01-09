@@ -24,6 +24,9 @@ main{
     animation: main1 0.9s ease forwards;
     animation-timeline: scroll();
 }
+#enlacesAcceso{
+   text-decoration-style: none;
+}
 .img-main{
     position: absolute;
     position: fixed;
