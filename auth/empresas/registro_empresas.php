@@ -40,8 +40,8 @@
                     <input type="text" id="contacto_adicional" class="form-control" name="contacto_adicional" placeholder="Teléfono, email, etc.">
                     <label for="horario">Horario</label>
                     <input type="text" id="horario" name="horario" class="form-control" placeholder="Ej: Lunes a Viernes 9:00-18:00">
-                    <label for="meet_url">Enlace de Meet</label>
-                    <input type="url" id="meet_url" name="meet_url" class="form-control" placeholder="https://meet.google.com/...">
+                    <label for="meet_url">Enlace Calendarios para los Meet</label>
+                    <input type="url" id="meet_url" name="meet_url" class="form-control" placeholder="https://calendar.app.google/......">
                     <?php echo $auth_message ?? ''; ?>
                     <input type="submit" name="confirmar" value="Registrar Empresa">
                 </form>

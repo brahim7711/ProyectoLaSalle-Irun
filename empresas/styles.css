@@ -397,7 +397,7 @@ body{
 
 .primero {
     position: relative;
-    height: 60vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

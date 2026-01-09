@@ -117,7 +117,7 @@ include('../php/administrador/procesar_admin.php');
                                         value="<?php echo htmlspecialchars($empresa_edit['spot_url'] ?? ''); ?>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="meet_url">URL Meet:</label>
+                                    <label for="meet_url">URL Calendario:</label>
                                     <input type="url" id="meet_url" name="meet_url" class="form-control"
                                         value="<?php echo htmlspecialchars($empresa_edit['meet_url'] ?? ''); ?>">
                                 </div>
