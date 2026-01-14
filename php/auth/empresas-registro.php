@@ -46,13 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['confirmar'])) {
                 $nombreUnico = null;
             }
 
-
-
-
-
-
-
-
             //Hash de la contraseña
             $password = hash("sha256", $_POST['contrasena_empresa']);
 
@@ -104,9 +97,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['confirmar'])) {
 
                 // GENERAR TODOS LOS STANDS POSIBLES Y BUSCAR UNO DISPONIBLE
                 $STAD = null;
-                $LetraStand = array('A', 'B', 'C', 'D');
+                $LetraStand = array('A', 'B', 'C', 'D', 'E', 'F');
                 while ($STAD == null) {
-                    $numero_aleatorio = rand(0, 3);
+                    $numero_aleatorio = rand(0, 5);
                     $numero_aleatorio2 = rand(1, 8);
                     for ($j = 1; $j <= 8; $j++) {
                         $stand_actual = $LetraStand[$numero_aleatorio] . $numero_aleatorio2;

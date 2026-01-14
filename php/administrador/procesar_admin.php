@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/../bd.php';
 
 $mensaje = '';
 $tipo_mensaje = '';

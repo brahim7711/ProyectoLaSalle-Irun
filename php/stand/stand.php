@@ -167,5 +167,89 @@
                 }
             }
             ?>
+            <!-- Pasillo horizontal -->
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+
+            <?php
+            // Consulta para obtener los stands ocupados (tabla stands, columna stand_id)
+            $ocupados = [];
+            $sql = "SELECT stand_id FROM stands WHERE empresa_id IS NOT NULL";
+            $result = $conexion->query($sql);
+            if ($result) {
+                while ($row = $result->fetch_assoc()) {
+                    $ocupados[] = $row['stand_id'];
+                }
+                $result->free();
+            } else {
+                error_log('Error al consultar stands ocupados: ' . $conexion->error);
+            }
+
+            // Renderizar la fila E (manteniendo la estructura original)
+             for ($i = 1; $i <= 8; $i++) {
+                $stand = "E" . $i;
+                if (in_array($stand, $ocupados)) {
+                    $sql="SELECT e.logo_url FROM stands s INNER JOIN empresas e ON s.empresa_id = e.id WHERE s.stand_id='$stand' LIMIT 1";
+                    $resultadologo=$conexion->query($sql);
+                    if ($resultadologo && $row = $resultadologo->fetch_assoc()) {
+                        $logoUrl = trim($row['logo_url'], '"');
+                        $logoUrl = str_replace('../../', '../', $logoUrl);
+                        echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')" style="background-image: url(\'' . htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') . '\');"></div>';
+                    } else {
+                        echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')">' . $stand . '</div>';
+                    }
+                } else {
+                    echo '<div class="stand vacio" data-stand="' . $stand . '">' . $stand . '</div>';
+                }
+            }
+            ?>
+            <!-- Pasillo horizontal -->
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+            <div class="pasillo horizontal"></div>
+
+            <?php
+            // Consulta para obtener los stands ocupados (tabla stands, columna stand_id)
+            $ocupados = [];
+            $sql = "SELECT stand_id FROM stands WHERE empresa_id IS NOT NULL";
+            $result = $conexion->query($sql);
+            if ($result) {
+                while ($row = $result->fetch_assoc()) {
+                    $ocupados[] = $row['stand_id'];
+                }
+                $result->free();
+            } else {
+                error_log('Error al consultar stands ocupados: ' . $conexion->error);
+            }
+
+            // Renderizar la fila F (manteniendo la estructura original)
+             for ($i = 1; $i <= 8; $i++) {
+                $stand = "F" . $i;
+                if (in_array($stand, $ocupados)) {
+                    $sql="SELECT e.logo_url FROM stands s INNER JOIN empresas e ON s.empresa_id = e.id WHERE s.stand_id='$stand' LIMIT 1";
+                    $resultadologo=$conexion->query($sql);
+                    if ($resultadologo && $row = $resultadologo->fetch_assoc()) {
+                        $logoUrl = trim($row['logo_url'], '"');
+                        $logoUrl = str_replace('../../', '../', $logoUrl);
+                        echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')" style="background-image: url(\'' . htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') . '\');"></div>';
+                    } else {
+                        echo '<div class="stand ocupado" data-stand="' . $stand . '" onclick="irAEmpresa(\'' . $stand . '\')">' . $stand . '</div>';
+                    }
+                } else {
+                    echo '<div class="stand vacio" data-stand="' . $stand . '">' . $stand . '</div>';
+                }
+            }
+            ?>
         </div>
         
