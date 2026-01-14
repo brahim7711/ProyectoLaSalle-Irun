@@ -58,6 +58,8 @@ INSERT INTO stands (stand_id, empresa_id) VALUES
 ('B1', NULL), ('B2', NULL), ('B3', NULL), ('B4', NULL), ('B5', NULL), ('B6', NULL), ('B7', NULL), ('B8', NULL),
 ('C1', NULL), ('C2', NULL), ('C3', NULL), ('C4', NULL), ('C5', NULL), ('C6', NULL), ('C7', NULL), ('C8', NULL),
 ('D1', NULL), ('D2', NULL), ('D3', NULL), ('D4', NULL), ('D5', NULL), ('D6', NULL), ('D7', NULL), ('D8', NULL);
+('E1',NULL), ('E2', NULL), ('E3', NULL), ('E4', NULL), ('E5', NULL), ('E6', NULL), ('E7', NULL), ('E8', NULL);
+('F1',NULL), ('F2', NULL), ('F3', NULL), ('F4', NULL), ('F5', NULL), ('F6', NULL), ('F7', NULL), ('F8', NULL);
 
 INSERT INTO administradores (email, password) VALUES
 ('2026lsbm@gmail.com', 'a6dc7bba71049f8d7b24de7cca878ddbbd53bdad36506aa162c93d4fc8a578ad');
