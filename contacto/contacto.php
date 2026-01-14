@@ -165,7 +165,7 @@ if (isset($_SESSION['idUsuario'])) {
             </div>
         
     </main>
-    <section class="ubicaciones-section p-5">
+    <section class="ubicaciones-section ">
                 <h2 class="ubicaciones-title">Nuestras Ubicaciones</h2>
                 <div class="ubicaciones-grid container-fluid">
                     <div class="ubicacion-card">
