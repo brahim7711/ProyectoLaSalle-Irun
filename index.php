@@ -184,6 +184,11 @@
     <div class="container-fluid s-caja s-pat p-0 m-0 pt-5" id="Patrocinadores">
         <div class="container-fluid pt-5 p-0 m-0">
             <h1 class="titulo">CENTROS PARTICIPANTES</h1>
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-warning" id="togglePatrocinadores">
+                    Ver todos los participantes
+                </button>
+            </div>
         </div>
         <div class="container-fluid patrocinadores row pt-5">
             <div class=" container-fluid carta col-sm-6 col-md-4 col-lg-2 carta1">
@@ -215,20 +220,120 @@
             </div>
             <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta4">
                 <div class="container-fluid log">
-                    <img src="./IMAGENES/logo-flekick.png" alt="">
+                    <img src="./resources/LOGOSCENTROS/eywa.png" alt="">
                 </div>
                 <div class="pat-text">
-                    <p>Marca especializada en equipamiento deportivo, conocida por sus espinilleras personalizables diseñadas para ofrecer comodidad,
-                        protección y estilo a deportistas.</p>
+                    <p>EYWA SPACE somos un equipo de emprendedores, consultores y expertos tecnológicos con más de 15 años de experiencia en sus respectivos campos que dibujan el camino hacia el éxito de tu Startup</p>
                 </div>
             </div>
-            <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta5">
-                <div class="container-fluid log">
-                    <img src="./IMAGENES/BCS.png" alt="">
+
+        </div>
+
+        <div class="container-fluid patrocinadores-extra">
+            <div class="container-fluid patrocinadores row pt-5">
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta5">
+                    <div class="container-fluid log">
+                        <img src="./resources/LOGOSCENTROS/LasalleBarceloneta.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>La Salle Barceloneta es un centro de formación post-obligatorio concertado, Bachillerato y FP de Grado Medio y Superior. Educamos a los jóvenes en los valores humanos y cristianos característicos de La Salle para promover una mejor sociedad.</p>
+                    </div>
                 </div>
-                <div class="pat-text">
-                    <p>Congregación religiosa internacional que sustenta la misión educativa de La Salle en el mundo, promoviendo valores de fraternidad,
-                        servicio y educación integral.</p>
+                <div class=" container-fluid carta col-sm-6 col-md-4 col-lg-2 carta6">
+                    <div class="container-fluid log">
+                        <img src="./resources/LOGOSCENTROS/LaSalleBerrozpe.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>Somos una comunidad que lleva más de 70 años creciendo con las personas, acompañándolas en todas las etapas de su vida académica y personal. Un lugar donde se aprende, se trabaja, se colabora y se celebra.</p>
+                    </div>
+                </div>
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta7">
+                    <div class="container-fluid log">
+                        <img src="./resources/LOGOSCENTROS/LaSalleFMoreno.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>La Salle Fundación Moreno Bachiller es un centro educativo concertado y católico ubicado en Arcos de la Frontera (Cádiz).
+                            Pertenece a la red de centros de los Hermanos de las Escuelas Cristianas (La Salle) y tiene una historia muy ligada a la generosidad local.</p>
+                    </div>
+                </div>
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta8">
+                    <div class="container-fluid log">
+                        <img src="./resources/LOGOSCENTROS/LaSalleInca.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>La Salle Inca es un colegio católico y concertado en Mallorca que ofrece educación integral desde Infantil hasta Bachillerato y FP. Destaca por su metodología innovadora NCA y una sólida formación profesional vinculada a valores cristianos y humanos.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container-fluid patrocinadores   row pt-5">
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta9">
+                    <div class="container-fluid log">
+                        <img src="./resources/LOGOSCENTROS/LaSalleJerez.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>La Salle Buen Pastor es un emblemático colegio concertado en el centro de Jerez de la Frontera. Ofrece todas las etapas educativas
+                            , destacando por su excelencia académica y su innovador modelo pedagógico NCA. Es un centro combina la formación en valores cristianos con los idiomas y la tecnología.</p>
+                    </div>
+                </div>
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta10">
+                    <div class="container-fluid log">
+                        <img src="./resources/LOGOSCENTROS/LaSalleJeresSC.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>La Salle Sagrado Corazón es un centro educativo concertado en Jerez de la Frontera con más de un siglo de historia. Ofrece todas las etapas desde Infantil hasta Bachillerato y Ciclos Formativos, destacando por su enfoque en la innovación pedagógica y la formación en valores humanos y cristianos.</p>
+                    </div>
+                </div>
+                <div class=" container-fluid carta col-sm-6 col-md-4 col-lg-2 carta11">
+                    <div class="container-fluid log">
+                        <img src="./resources/LOGOSCENTROS/LaSalleLaSeu.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>La Salle la Seu d'Urgell somos una escuela centenaria en nuestro municipio. Tenemos como objetivo principal estimular a los alumnos para que adopten una actitud positiva, libre y decidida ante la vida, a través de la promoción de los valores de nuestro Carácter Propio</p>
+                    </div>
+                </div>
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta12">
+                    <div class="container-fluid log">
+                        <img src="./resources/LOGOSCENTROS/LaSalleManelleu.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>La Salle Manlleu es una escuela concertada de Educación Secundaria Obligatoria , Bachillerato y Ciclos Formativos con mucha historia en la ciudad de Manlleu. Desde 1880 trabajamos con un carácter propio bien definido y con un compromiso por la innovación pedagógica .</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container-fluid patrocinadores  row pt-5">
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta13">
+                    <div class="container-fluid log">
+                        <img src="./resources/LOGOSCENTROS/LaSalleMollerusa-removebg-preview.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>La Salle Mollerussa, un centro educativo referente a Mollerussa desde la llegada de los primeros Hermanos en 1905. Actualmente somos una escuela de 3 líneas educativas la ESO, el Bachillerato y la Formación Profesional, dinámica y con una implicación activa en las actividades propias de nuestro entorno más cercano.</p>
+                    </div>
+                </div>
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta14">
+                    <div class="container-fluid log">
+                        <img src="./resources/LOGOSCENTROS/LaSalleSagradoCor.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>Es un colegio concertado que pertenece a la red de centros educativos La Salle, con un millón de alumnos en 77 países de todo el mundo. Nuestro planteamiento educativo trabaja los valores de responsabilidad, justicia, interioridad, trascendencia, creatividad y convivencia.</p>
+                    </div>
+                </div>
+                <div class="container-fluid carta col-sm-6 col-md-4 col-lg-2 carta15">
+                    <div class="container-fluid log">
+                        <img src="./resources/LOGOSCENTROS/LaSalleValladolid.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>Fundado hace ya más de 75 años por los Hermanos de las Escuelas Cristianas, con la misión de facilitar la mejor educación para niños y jóvenes, el colegio sigue manteniendo viva la pasión de aquellos Hermanos y sigue desplegando actividades y programas que mejoran año tras año su propuesta didáctica..</p>
+                    </div>
+                </div>
+                <div class=" container-fluid carta col-sm-6 col-md-4 col-lg-2 carta16">
+                    <div class="container-fluid log">
+                        <img src="./resources/LOGOSCENTROS/LaSalleVirgenDelMar.png" alt="">
+                    </div>
+                    <div class="pat-text">
+                        <p>La Salle Virgen del Mar es un centro educativo en Almería que forma parte de la red mundial La Salle, dedicada a la educación integral. Ofrece una enseñanza basada en valores, innovación pedagógica y acompañamiento personal del alumnado..</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -236,13 +341,19 @@
             <h4>ARCHIVOS INFORMACIÓN</h4>
             <div class="container-fluid archivos row p-0 m-0 pt-3 pb-3">
                 <div class="container-fluid archivo col-sm-12 col-md-4 col-lg-4">
-                    <h5>Programa feria<br><a href="./Archivos/Programa_LSBM_2025.pdf" download><button><span class="bi bi-download"></span></button></a></h5>
+                    <a href="./documentacion/Programa de la feria.pdf" download>
+                        <h5>Programa Feria <br><span class="bi bi-download descargarIcono"></span></h5>
+                    </a>
                 </div>
                 <div class="container-fluid archivo col-sm-12 col-md-4 col-lg-4">
-                    <h5>Bases Concurso<br><a href="./Archivos/BasesConcurso.pdf" download><button><span class="bi bi-download"></span></button></a></h5>
+                    <a href="./documentacion/Bases del Concurso de Spot Publicitario LSBM 2026.pdf" download>
+                        <h5>Bases Concurso <br><span class="bi bi-download descargarIcono"></span></h5>
+                    </a>
                 </div>
                 <div class="container-fluid archivo col-sm-12 col-md-4 col-lg-4">
-                    <h5>Guian para participar<br><a href="./Archivos/LSBM 2025 Guia Feria .pdf" download><button><span class="bi bi-download"></span></button></a></h5>
+                    <a href="./documentacion/GUÍA DE PARTICIPACIÓN LSBM 2026.pdf" download>
+                        <h5>Guía de participación<span class="bi bi-download descargarIcono"></span></h5>
+                    </a>
                 </div>
             </div>
         </div>
@@ -280,7 +391,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./JS/main.js"></script>
-<script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
+
 <script src="https://files.bpcontent.cloud/2025/10/10/16/20251010162421-YDPBONI7.js" defer></script>
 <!-- API EmailJS SDK -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -293,6 +404,16 @@
             email: "<?php echo isset($datos_email['email']) ? htmlspecialchars($datos_email['email']) : ''; ?>"
         }
     };
+    const btn = document.getElementById('togglePatrocinadores');
+    const extra = document.querySelector('.patrocinadores-extra');
+
+    btn.addEventListener('click', () => {
+        extra.classList.toggle('show');
+
+        btn.textContent = extra.classList.contains('show') ?
+            'Ver menos' :
+            'Ver todos los patrocinadores';
+    });
 </script>
 
 <script src="js-menu.js"></script>

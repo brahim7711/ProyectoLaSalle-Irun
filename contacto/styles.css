@@ -191,7 +191,9 @@ main{
     width: 40rem;
     border-radius: 10px;
     background-image: url(../IMAGENES/irunfoto.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .irun-org{
   
@@ -438,6 +440,7 @@ footer{
 }
 
 @media (max-width: 768px) {
+    
     .ubicaciones-section {
         margin-top: 50px;
         padding-top: 40px;
@@ -472,12 +475,15 @@ footer{
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .ubicaciones-title {
         font-size: 1.3rem;
         margin-bottom: 25px;
     }
-
+     .fotoirun {
+        width: 100%;
+        height: 15rem;
+    }
     .ubicacion-card h3 {
         font-size: 1rem;
         padding: 12px;

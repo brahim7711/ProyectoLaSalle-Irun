@@ -38,11 +38,11 @@ if (isset($_SESSION['idUsuario'])) {
                             echo '<a href="../inicioSesion/inicioGeneral.html" id="iniciar">INICIAR SESIÓN</a>';
                         } elseif ($tipo == 'empresa') {
                             echo '<a href="../perfilEmpresa/paginaPrivada.php">' . $nombre . '</a>';
-                        }elseif ($tipo == 'administrador') {
+                        } elseif ($tipo == 'administrador') {
                             echo '<a href="../administrador/panel_admin.php">ADMIN</a>';
-                        }   
+                        }
                         ?>
-                </button></li>
+                    </button></li>
             </ul>
         </div>
     </nav>
@@ -107,7 +107,7 @@ if (isset($_SESSION['idUsuario'])) {
         <div class="equipo mt-2 row mx-3">
             <div class="miembro col-sm-8 col-md-12 col-lg-3 carta mt-2 p-0">
                 <div class="container-fluid caja-img">
-                    <img class="card-img-top" src="../resources/sinfoto.webp" alt="Card image cap">
+                    <img class="card-img-top" src="../IMAGENES/Brahim.png" alt="Card image cap">
                 </div>
                 <div class="text-miembros">
                     <h4 class="card-title mb-2">Brahim Litim</h4>
@@ -152,48 +152,48 @@ if (isset($_SESSION['idUsuario'])) {
         <h2>La Salle Irun</h2>
         <br><br>
         <div class="irun-org row m-0 container p-0">
-                <div class="fotoirun col-sm-12 col-md-12 col-lg-6 p-0"></div>
-                <div class="col-sm-12 col-md-12 col-lg-5 text-irun pt-3">
-                    <p>
-                        La participación conjunta de ambos centros refuerza los valores de colaboración, 
-                        convivencia y <strong>espíritu La Salle</strong> , convirtiendo la feria en una experiencia enriquecedora 
-                        para todos los asistentes. Este evento permite visibilizar el esfuerzo realizado 
-                        en el aula y fomenta el intercambio de experiencias y el aprendizaje mutuo, dejando 
-                        una huella positiva en el alumnado y en toda la comunidad educativa.
-                    </p>
-                </div>
+            <div class="fotoirun col-sm-12 col-md-12 col-lg-6 p-0"></div>
+            <div class="col-sm-12 col-md-12 col-lg-5 text-irun pt-3">
+                <p>
+                    La participación conjunta de ambos centros refuerza los valores de colaboración,
+                    convivencia y <strong>espíritu La Salle</strong> , convirtiendo la feria en una experiencia enriquecedora
+                    para todos los asistentes. Este evento permite visibilizar el esfuerzo realizado
+                    en el aula y fomenta el intercambio de experiencias y el aprendizaje mutuo, dejando
+                    una huella positiva en el alumnado y en toda la comunidad educativa.
+                </p>
             </div>
-        
+        </div>
+
     </main>
     <section class="ubicaciones-section p-5">
-                <h2 class="ubicaciones-title">Nuestras Ubicaciones</h2>
-                <div class="ubicaciones-grid container-fluid">
-                    <div class="ubicacion-card">
-                        <h3>LA SALLE SANTO ÁNGEL</h3>
-                        <div class="ubicacion-info">
-                            <p><strong>Dirección:</strong><br> C. de Tomás Anzano, 1, Casablanca, 50012 Zaragoza</p>
-                            <p><strong>Teléfono:</strong><br>976 75 37 18</p>
-                            <p><strong>Email:</strong><br>administracion@lasallesantoangel.es</p>
-                            <p><strong>Horario:</strong><br>Lunes - Viernes: 08:00 - 14:00</p>
-                        </div>
-                        <div class="ubicacion-mapa">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.9287047883627!2d-0.8899999!3d41.6555556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5e7f5c5c5c5c5cd%3A0x1234567890!2sC.%20de%20Tom%C3%A1s%20Anzano%2C%201%2C%20Casablanca%2C%2050012%20Zaragoza!5e0!3m2!1ses!2ses!4v1234567890" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-
-                    <div class="ubicacion-card">
-                        <h3>LA SALLE IRUN</h3>
-                        <div class="ubicacion-info">
-                            <p><strong>Dirección:</strong><br>Elizatxo Hiribidea, 14, 20303 Irun, Gipuzkoa</p>
-                            <p><strong>Teléfono:</strong><br>943 62 84 11</p>
-                            <p><strong>Email:</strong><br>lsbm@lasalle. es</p>
-                            <p><strong>Horario:</strong><br>Lunes - Viernes: 08:00 - 18:00</p>
-                        </div>
-                        <div class="ubicacion-mapa">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.123456789!2d-1.7944444!3d43.3477778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd517e8e8e8e8e8ef%3A0x1234567890!2sElizatxo%20Hiribidea%2C%2014%2C%2020303%20Irun%2C%20Gipuzkoa!5e0!3m2!1ses!2ses!4v1234567890" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
+        <h2 class="ubicaciones-title">Nuestras Ubicaciones</h2>
+        <div class="ubicaciones-grid container-fluid">
+            <div class="ubicacion-card">
+                <h3>LA SALLE SANTO ÁNGEL</h3>
+                <div class="ubicacion-info">
+                    <p><strong>Dirección:</strong><br> C. de Tomás Anzano, 1, Casablanca, 50012 Zaragoza</p>
+                    <p><strong>Teléfono:</strong><br>976 75 37 18</p>
+                    <p><strong>Email:</strong><br>administracion@lasallesantoangel.es</p>
+                    <p><strong>Horario:</strong><br>Lunes - Viernes: 08:00 - 14:00</p>
                 </div>
+                <div class="ubicacion-mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.9287047883627!2d-0.8899999!3d41.6555556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5e7f5c5c5c5c5cd%3A0x1234567890!2sC.%20de%20Tom%C3%A1s%20Anzano%2C%201%2C%20Casablanca%2C%2050012%20Zaragoza!5e0!3m2!1ses!2ses!4v1234567890" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="ubicacion-card">
+                <h3>LA SALLE IRUN</h3>
+                <div class="ubicacion-info">
+                    <p><strong>Dirección:</strong><br>Elizatxo Hiribidea, 14, 20303 Irun, Gipuzkoa</p>
+                    <p><strong>Teléfono:</strong><br>943 62 84 11</p>
+                    <p><strong>Email:</strong><br>lsbm@lasalle. es</p>
+                    <p><strong>Horario:</strong><br>Lunes - Viernes: 08:00 - 18:00</p>
+                </div>
+                <div class="ubicacion-mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.123456789!2d-1.7944444!3d43.3477778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd517e8e8e8e8e8ef%3A0x1234567890!2sElizatxo%20Hiribidea%2C%2014%2C%2020303%20Irun%2C%20Gipuzkoa!5e0!3m2!1ses!2ses!4v1234567890" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
     </section>
     <footer class="container-fluid">
         <div class="row">

@@ -223,6 +223,11 @@ article{
     position: relative;
     font-size: clamp(2rem, 3vw, 3rem);
 }
+.text-center{
+     animation: slide-left 5s ease forwards;
+    animation-timeline: view();
+    animation-range: 0% 80%;
+}
 .titulo::after{
     content: "";
     position: absolute;
@@ -259,7 +264,10 @@ article h5{
     opacity: 0;
     animation: slide-left 4s ease forwards;
     animation-timeline: scroll();
-    animation-range: 10% 20%;
+    animation-range: 5% 10%;
+}
+.descargarIcono{
+    color: var(--primary-color) !important;
 }
 
 .caja1{
@@ -384,6 +392,10 @@ article h5{
     animation-timeline: view();
     animation-range: 20% 50%;
 }
+#enlacesAcceso{
+    text-decoration: none;
+    color:  var(--primary-color);
+}
 .titulo2{
     display: flex;
     align-items: center;
@@ -463,6 +475,15 @@ article h5{
 .play.oculto{
     display: none;
 }
+
+
+.patrocinadores-extra {
+    display: none !important;
+}
+
+.patrocinadores-extra.show {
+    display: block !important;
+}
 .play:hover{
     scale: 4.5;
 }
@@ -533,70 +554,62 @@ footer{
     margin-left: 1px;
     margin-right: 1px;
     box-shadow: 0 0 40px rgba(122, 122, 122, 0.732);
-    height: 25rem;
+    height: 20rem;
 }
 .carta1::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 40px;
-    background-color: rgb(43, 47, 94);
     background-image: url(./IMAGENES/logodistrito.png);
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
 }
 .carta2::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 40px;
-    background-color: rgb(43, 47, 94);
+  
     background-image: url(./IMAGENES/lasallesantoangel.png);
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
 }
 .carta3::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 40px;
-    background-color: rgb(43, 47, 94);
     background-image: url(./IMAGENES/lasalleirun.png);
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-
 }
 .carta4::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 40px;
-    background-color: rgb(43, 47, 94);
-    background-image: url(./IMAGENES/logo-flekick.png);
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
+    background-image: url(./resources/LOGOSCENTROS/eywa.png);
 }
 .carta5::after{
+    background-image: url(./resources/LOGOSCENTROS/LasalleBarceloneta.png);
+}
+
+.carta6::after{
+    background-image: url(./resources/LOGOSCENTROS/LaSalleBerrozpe.png);
+   
+}
+.carta7::after{
+    background-image: url(./resources/LOGOSCENTROS/LaSalleFMoreno.png);
+}
+.carta8::after{
+    background-image: url(./resources/LOGOSCENTROS/LaSalleInca.png);
+}
+.carta9::after{
+    background-image: url(./resources/LOGOSCENTROS/LaSalleJerez.png);
+}
+.carta10::after{
+    background-image: url(./resources/LOGOSCENTROS/LaSalleJeresSC.png);
+}
+.carta11::after{
+    background-image: url(./resources/LOGOSCENTROS/LaSalleLaSeu.png);
+}
+.carta12::after{
+    background-image: url(./resources/LOGOSCENTROS/LaSalleManelleu.png);
+}
+.carta13::after{
+    background-image: url(./resources/LOGOSCENTROS/LaSalleMollerusa-removebg-preview.png);
+}
+.carta14::after{
+    background-image: url(./resources/LOGOSCENTROS/LaSalleSagradoCor.png);
+}
+.carta15::after{
+    background-image: url(./resources/LOGOSCENTROS/LaSalleValladolid.png);
+}
+.carta16::after{
+    background-image: url(./resources/LOGOSCENTROS/LaSalleVirgenDelMar.png);
+}
+
+
+.carta::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -605,12 +618,16 @@ footer{
     width: 100%;
     border-radius: 40px;
     background-color: rgb(43, 47, 94);
-    background-image: url(./IMAGENES/BCS.png);
     background-size: 70%;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
+    
 }
+
+
+
+
 .carta:hover::after{
     animation: carta 1s ease-in-out forwards;
 }
