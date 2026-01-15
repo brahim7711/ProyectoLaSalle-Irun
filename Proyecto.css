@@ -25,7 +25,8 @@ main{
     animation-timeline: scroll();
 }
 #enlacesAcceso{
-   text-decoration-style: none;
+   text-decoration: none;
+   color: var(--primary-color)
 }
 .img-main{
     position: absolute;

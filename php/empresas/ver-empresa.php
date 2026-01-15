@@ -60,7 +60,7 @@ if ($empresa) {
               <div class="dato-empresas2">
                 <h1>Horario</h1>
                 <p>' . htmlspecialchars($empresa['horario'], ENT_QUOTES, 'UTF-8') . '</p>
-                <h3>Enlace Meet:</h3>
+                <h3>Agenda de Citas:</h3>
                 <p><a href="' . htmlspecialchars($empresa['meet_url'], ENT_QUOTES, 'UTF-8') . '" target="_blank">' . htmlspecialchars($empresa['meet_url'], ENT_QUOTES, 'UTF-8') . '</a></p>
               </div>
             </div>

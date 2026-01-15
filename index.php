@@ -69,7 +69,7 @@
         <div class="container-fluid programa-content row m-0 py-5">
             <div class="container-fluid col-5 pc">
                 <div class="caja">
-                    <h4>ACTO INAUGURAL <br> <a id="enlacesAcceso" href="https://meet.google.com/bpm-mbns-njb">Acceder</a> </h4>
+                    <h4>ACTO INAUGURAL <br> <a id="enlacesAcceso" href="https://meet.google.com/bpm-mbns-njb" target="_blank">Acceder</a> </h4>
                 </div>
                 <div class="caja"></div>
                 <div class="caja">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="caja"></div>
                 <div class="caja">
-                    <h4>CLAUSURA DE LA FERIA <br> <a id="enlacesAcceso" href="https://meet.google.com/bpm-mbns-njb">Acceder</a></h4>
+                    <h4>CLAUSURA DE LA FERIA <br> <a id="enlacesAcceso" href="https://meet.google.com/bpm-mbns-njb" target="_blank">Acceder</a></h4>
                 </div>
             </div>
             <div class="container-fluid col-2 linea px-1">
@@ -100,7 +100,7 @@
             <div class="container-fluid col-5 pc">
                 <div class="caja"></div>
                 <div class="caja">
-                    <h4>CONFERENCIA: EMPRENDER CON YERAY MATEOS (EYWA SPACE) <br> <a id="enlacesAcceso" href="https://meet.google.com/bpm-mbns-njb">Acceder</a></h4>
+                    <h4>CONFERENCIA: EMPRENDER CON YERAY MATEOS (EYWA SPACE) <br> <a id="enlacesAcceso" href="https://meet.google.com/bpm-mbns-njb" target="_blank">Acceder</a></h4>
                 </div>
                 <div class="caja"></div>
                 <div class="caja">
