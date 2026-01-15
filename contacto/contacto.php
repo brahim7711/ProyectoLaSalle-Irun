@@ -64,7 +64,7 @@ if (isset($_SESSION['idUsuario'])) {
         <div class="equipo mt-2 row mx-3">
             <div class="miembro col-sm-8 col-md-12 col-lg-4 carta mt-2 p-0">
                 <div class="container-fluid caja-img">
-                    <img class="card-img-top" src="../resources/sinfoto.webp" alt="Card image cap">
+                    <img class="card-img-top" src="../resources/gabfoto2.png" alt="Card image cap">
                 </div>
                 <div class="text-miembros">
                     <h4 class="card-title mb-2">Gabriel Delgado</h4>
