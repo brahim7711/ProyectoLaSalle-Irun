@@ -762,7 +762,7 @@ body{
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
     padding: 18px 35px;
-    border: none;
+    border: 2px solid var(--background-color);
     border-radius: 50px;
     cursor: pointer;
     text-transform: uppercase;
@@ -796,7 +796,7 @@ body{
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
     padding: 18px 35px;
-    border: none;
+    border: 2px solid var(--background-color);
     border-radius: 50px;
     cursor: pointer;
     text-transform: uppercase;

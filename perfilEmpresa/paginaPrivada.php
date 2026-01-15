@@ -212,7 +212,7 @@
 
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="meet-tab" data-bs-toggle="tab" data-bs-target="#meet" type="button" role="tab">
-                            Meet
+                            Citas
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -279,7 +279,7 @@
                         <div class="tab-pane fade" id="meet" role="tabpanel">
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <label class="form-label">Google Meet</label>
+                                    <label class="form-label">Agenda de Citas</label>
                                     <input type="text" class="form-control" name="linkMeet" value="<?php echo $linkMeet; ?>">
                                 </div>
                             </div>
