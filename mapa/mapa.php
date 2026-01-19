@@ -50,7 +50,7 @@ if (isset($_SESSION['idUsuario'])) {
     <main>
         <section class="mapa-container">
         <div class="mapa-titulo">
-            <h1>MAPA DE LA FERIA DE EMPLEO</h1>
+            <h1>MAPA DE LA FERIA</h1>
             <p>Haz clic en los stands ocupados para ver información de las empresas</p>
         </div>
 

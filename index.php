@@ -171,13 +171,12 @@
     </div>
     <div class="container-fluid s-caja caja22 pt-5 ">
         <div class="container titulo2 pt-5 p-0 m-0">
-            <h1>🏆GANADOR SPORT PUBLICITARIO 2025🏆</h1>
+            <h1>La Salle Business Match 2026</h1>
         </div>
         <div class="container video-contenedor p-0 m-0 mt-3 pb-5 mb-5">
-            <h2 class="mb-4">EVENTURA</h2>
             <div class="container-fluid v2 p-0">
                 <span class="bi bi-play-circle-fill play"></span>
-                <iframe class="video" controls src="https://www.youtube.com/embed/jORxkhINil4" frameborder="0"></iframe>
+                <iframe class="video" controls src="https://www.youtube.com/embed/zYtfJW4OBzU?si=fYmn5e0JVYyBky5t" frameborder="0"></iframe>
             </div>
         </div>
     </div>
