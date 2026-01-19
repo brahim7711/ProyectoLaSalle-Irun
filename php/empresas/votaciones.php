@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $sql_inscripcion = "SELECT id FROM inscripciones WHERE correo = ?";
+    $sql_inscripcion = "SELECT id FROM inscripciones WHERE email = ?";
     $stmt_inscripcion = $conexion->prepare($sql_inscripcion);
     $stmt_inscripcion->bind_param("s", $correo);
     $stmt_inscripcion->execute();
